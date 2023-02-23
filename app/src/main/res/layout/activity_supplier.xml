@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Customer.CustomerA">
+    tools:context=".activities.supplier.SupplierActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/img_back"
                     android:textColor="@color/deep_blue"
-                    android:text="Customer"
+                    android:text="Supplier"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 

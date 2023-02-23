@@ -158,4 +158,5 @@
     <string name="add_tax_name">Add Tax Name</string>
     <string name="tax_name">Tax Name</string>
     <string name="tax_percentage">Tax Percentage</string>
+    <string name="add_customer">Add Customer</string>
 </resources>

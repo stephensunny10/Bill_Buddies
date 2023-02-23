@@ -15,6 +15,7 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.itax.billbuddies.activities.Auth.LoginA;
+import com.itax.billbuddies.activities.Customer.AddCustomerA;
 import com.itax.billbuddies.activities.Item.ItemActivity;
 import com.itax.billbuddies.activities.ListA;
 import com.itax.billbuddies.activities.Purchase.PurchaseA;
@@ -24,6 +25,7 @@ import com.itax.billbuddies.activities.category.CategoryA;
 import com.itax.billbuddies.activities.payment.PaymentA;
 import com.itax.billbuddies.activities.reciept.ReceiptA;
 import com.itax.billbuddies.activities.setting.settingF;
+import com.itax.billbuddies.activities.supplier.AddSupplierA;
 import com.itax.billbuddies.activities.wallet.WalletA;
 import com.itax.billbuddies.controller.ITaxCompanyList;
 import com.itax.billbuddies.controller.NavMenu;
@@ -123,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.purchase:
                     moveToPurchase();
+                    break;
+                case R.id.customer:
+                    startActivity(new Intent(this, AddCustomerA.class));
+                    break;
+                case R.id.supplier:
+                    startActivity(new Intent(this, AddSupplierA.class));
                     break;
                 case R.id.item:
                     moveToItem();

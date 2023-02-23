@@ -14,6 +14,14 @@
         android:title="@string/purchase"
         android:icon="@drawable/ic_outline_add_shopping_cart_24"/>
     <item
+        android:id="@+id/customer"
+        android:title="@string/customer"
+        android:icon="@drawable/ic_outline_shopping_cart_24"/>
+    <item
+        android:id="@+id/supplier"
+        android:title="@string/supplier"
+        android:icon="@drawable/ic_outline_add_shopping_cart_24"/>
+    <item
         android:id="@+id/item"
         android:title="@string/item_service"
         android:icon="@drawable/ic_outline_card_giftcard_24"/>
