@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center|left">
+
+        <TextView
+            android:id="@+id/txt_sale_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/primary_txt_color"
+            android:layout_marginBottom="10dp"
+            android:text="@string/sale_list" />
+        <LinearLayout
+            android:id="@+id/subLay_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="@dimen/dp14"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_border_input"
+                android:padding="6dp"
+
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"/>
+            <TextView
+                android:id="@+id/sale_start_date"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="start date"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_border_input"
+                android:padding="6dp"
+              android:layout_marginTop="6dp"
+
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:id="@+id/sale_end_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="end date"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_credit_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/primary_txt_color"
+            android:text="@string/credit_note" />
+    <LinearLayout
+        android:id="@+id/Lay_credit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+       android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/subLay_credit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="@dimen/dp14"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_border_input"
+                android:padding="6dp"
+
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:id="@+id/credit_start_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="start date"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_border_input"
+                android:layout_marginTop="6dp"
+                android:padding="6dp"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:id="@+id/credit_end_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="end date"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner_status"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_border_input"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </Spinner>
+        <Spinner
+            android:id="@+id/spinner_party_name"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_border_input"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </Spinner>
+        <EditText
+            android:id="@+id/spinner_invoice"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_border_input"
+            android:hint="Invoice number"
+            android:padding="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </EditText>
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_manage_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/primary_txt_color"
+            android:text="@string/manage_customer" />
+    <LinearLayout
+        android:id="@+id/Lay_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/subLay_saleList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="@dimen/dp14"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_border_input"
+                android:padding="6dp"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="start date"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_border_input"
+                android:padding="6dp"
+                android:layout_marginTop="6dp"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="end date"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spinner_business"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_border_input"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </Spinner>
+        <Spinner
+            android:id="@+id/spinner_campany_name"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_border_input"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </Spinner>
+        <EditText
+            android:id="@+id/spinner_mobile"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_border_input"
+            android:hint="Mobile number"
+            android:padding="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </EditText>
+    </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_red_gradient"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_marginTop="6dp"
+            android:text="@string/apply"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

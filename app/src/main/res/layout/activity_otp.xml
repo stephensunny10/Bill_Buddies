@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Auth.OtpA">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="center|top">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_centerInParent="true"
+            android:id="@+id/animationView"
+            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_rawRes="@raw/otp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="@string/otp_verification"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_enter_otp" />
+
+        <com.chaos.view.PinView
+            android:focusable="true"
+            android:layout_marginTop="30dp"
+            android:focusableInTouchMode="true"
+            android:id="@+id/pinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:textColor="#111"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:itemCount="6"
+            app:itemHeight="45dp"
+            app:itemRadius="10dp"
+            app:lineColor="#131415"
+            app:viewType="rectangle" />
+
+        <Button
+            android:id="@+id/btn_verify_otp"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_primary_btn"
+            android:text="@string/verify_otp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#fff"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did not get otp?"
+                android:fontFamily="@font/poppins_regular"/>
+            <TextView
+                android:id="@+id/txt_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_otp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

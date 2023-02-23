@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.itax.billbuddies">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".utils.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".CustomerA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HsnA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.TaxClass.AddTaxClassA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.TaxClass.TaxClassA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Unit.AddUnitA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Unit.UnitA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Brand.AddBrandA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Brand.BrandA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.payment.AddPaymentA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.category.AddCategoryA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Item.AddItemA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.bank.ManageCashTransactionA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.bank.ManageBankDetailA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.report.SaleReportA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.category.CategoryA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.wallet.WalletA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.reciept.ReceiptA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.payment.PaymentA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.bank.AddBankDetailA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.bank.BankA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Item.ItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Purchase.PurchaseA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Sale.SaleA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Purchase.AddPurchaseA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Sale.AddSalesA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Auth.ResetPwdA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Auth.OtpA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Auth.ForgotPwdA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Auth.RegisterA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Auth.LoginA"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashA"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

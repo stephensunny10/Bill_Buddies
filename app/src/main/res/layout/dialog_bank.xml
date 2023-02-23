@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/manage_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp14"
+            android:layout_margin="10dp"
+            android:text="@string/manage_cash" />
+
+        <TextView
+            android:id="@+id/manage_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp14"
+            android:layout_margin="10dp"
+            android:text="@string/manage_bank" />
+
+        <TextView
+            android:id="@+id/cash_opening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp14"
+            android:layout_margin="10dp"
+            android:text="@string/cash_opening" />
+
+
+        <TextView
+            android:id="@+id/cash_to_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp14"
+            android:layout_margin="10dp"
+            android:text="@string/cash_to_bank" />
+
+        <TextView
+            android:id="@+id/bank_to_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp14"
+            android:layout_margin="10dp"
+            android:text="@string/bank_to_bank" />
+
+    </LinearLayout>
+
+</RelativeLayout>
