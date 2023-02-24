@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.setting.UserSettingA">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            android:background="@drawable/gradient_white"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/user_setting"
+                    android:layout_toRightOf="@+id/img_back"
+                    android:textColor="@color/deep_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/purchase_invoice_prefix"/>
+            <EditText
+                android:id="@+id/et_purchase_invoice_prefix"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/purchase_invoice_last_no"/>
+            <EditText
+
+                android:id="@+id/et_purchase_invoice_last_no"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/purchase_return_invoice_prefix"/>
+            <EditText
+
+                android:id="@+id/et_purch_return_invoice_prefix"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/purchase_return_invoice_last_no"/>
+
+            <EditText
+                android:id="@+id/et_pur_return_inv_last_no"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_invoice_prefix"/>
+
+            <EditText
+                android:id="@+id/et_sales_invoice_prefix"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_border_input"
+                android:maxLength="12"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_invoice_last_no"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_performa_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_perf_invoice_last_no"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:focusableInTouchMode="false"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_retail_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_retail_invoice_last_no"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:focusableInTouchMode="false"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_export_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_export_invoice_last_no"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_delivery_ch_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_delivery_challan"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_rcm_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_rcm_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_stock_transfer_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_stock_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/sales_fixed_asset_invoice_last_no"/>
+            <EditText
+                android:id="@+id/et_sales_fixed_asset"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/use_authorised_sig_image"/>
+            <EditText
+                android:id="@+id/et_use_authorised_sig_image"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/authorised_sig_image"/>
+            <EditText
+                android:id="@+id/et_authorised_sig_image"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/terms_condition"/>
+            <EditText
+                android:id="@+id/et_terms_condition"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/invoice_footer_text"/>
+            <EditText
+                android:id="@+id/et_invoice_footer_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="12"
+                android:background="@drawable/bg_border_input" />
+
+                <TextView
+                    android:id="@+id/txt_item_wise"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="@string/item_wise_discount" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_item">
+
+                <RadioButton
+                    android:id="@+id/yes_item_wise"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/no_item_wise"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/text_bill_wise"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/bill_wise_discount" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_bill">
+
+                <RadioButton
+                    android:id="@+id/yes_bill_wise"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/no_bill_wise"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+                <TextView
+                    android:id="@+id/text_tds"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="@string/tds_applicable" />
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioGroup_tds">
+
+                    <RadioButton
+                        android:id="@+id/yes_tds_app"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="yes"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/no_tds_app"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="no"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:textSize="20dp" />
+                </RadioGroup>
+            <TextView
+                android:id="@+id/text_cess_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/cess_applicable" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_cess">
+
+                <RadioButton
+                    android:id="@+id/yes_cess_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/no_cess_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/text_eway_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/eway_bill_applicable" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_eway">
+
+                <RadioButton
+                    android:id="@+id/yes_eway_bill_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/no_eway_bill_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/text_disp_thrg_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/dispatch_though_applicable" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_disp_app">
+
+                <RadioButton
+                    android:id="@+id/yes_disp_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/no_disp_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/text_tds_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/do_you_want_total_out_sale" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_outsale">
+
+                <RadioButton
+                    android:id="@+id/yes_total_outsale"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/no_total_outsalep"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/text_notification"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/do_you_want_notification" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_notification">
+
+                <RadioButton
+                    android:id="@+id/yes_notification"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/no_notification"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="Submit"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb"/>
+</LinearLayout>

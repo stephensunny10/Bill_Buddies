@@ -159,4 +159,33 @@
     <string name="tax_name">Tax Name</string>
     <string name="tax_percentage">Tax Percentage</string>
     <string name="add_customer">Add Customer</string>
+  <!--  TODO:Usesetting-->
+    <string name="purchase_invoice_prefix">Purchase Invoice Prefix</string>
+    <string name="purchase_invoice_last_no">Purchase Invoice Last No.</string>
+    <string name="purchase_return_invoice_prefix">  Purchase Return Invoice Prefix</string>
+    <string name="sales_invoice_prefix"> Sales Invoice Prefix</string>
+    <string name="sales_invoice_last_no"> Sales Invoice Last No.</string>
+    <string name="sales_return_invoice_prefix"> Sales Return Invoice Prefix</string>
+    <string name="sales_performa_invoice_last_no"> Sales Performa Invoice Last No.</string>
+    <string name="sales_retail_invoice_last_no"> Sales Retail Invoice Last No.</string>
+    <string name="sales_export_invoice_last_no"> Sales Export Invoice Last No.</string>
+    <string name="sales_delivery_ch_invoice_last_no">Sales Delivery Chalan Invoice Last No.</string>
+    <string name="sales_rcm_invoice_last_no"> Sales RCM Invoice Last No.</string>
+    <string name="sales_stock_transfer_invoice_last_no">Sales Stock Transfer Invoice Last No.</string>
+    <string name="sales_fixed_asset_invoice_last_no">Sales Fixed Asstes Invoice Last No.</string>
+    <string name="use_authorised_sig_image"> Use Authorised Signatory Image on Invoice?</string>
+    <string name="authorised_sig_image"> Autorised Signatory Image</string>
+    <string name="terms_condition"> Terms and Condtions</string>
+    <string name="invoice_footer_text">Invoice Footer Text</string>
+    <string name="item_wise_discount"> Item Wise Discount</string>
+    <string name="bill_wise_discount">  Bill Wise Discount</string>
+    <string name="tds_applicable">  Tds Applicable</string>
+    <string name="cess_applicable">Cess Applicable</string>
+    <string name="eway_bill_applicable">  Eway Bill Applicable</string>
+    <string name="dispatch_though_applicable">  Dispatch Though Applicable</string>
+    <string name="do_you_want_total_out_sale"> Do You want Total Outstaing on Sale Bill</string>
+    <string name="do_you_want_notification">Do you want Notification for outsanding amount day By day</string>
+    <string name="purchase_return_invoice_last_no">Purchase Return Invoice Last No</string>
+    <string name="user_setting">User Setting</string>
+
 </resources>

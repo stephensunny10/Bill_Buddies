@@ -24,6 +24,7 @@ import com.itax.billbuddies.activities.Sale.SaleA;
 import com.itax.billbuddies.activities.category.CategoryA;
 import com.itax.billbuddies.activities.payment.PaymentA;
 import com.itax.billbuddies.activities.reciept.ReceiptA;
+import com.itax.billbuddies.activities.setting.UserSettingA;
 import com.itax.billbuddies.activities.setting.settingF;
 import com.itax.billbuddies.activities.supplier.AddSupplierA;
 import com.itax.billbuddies.activities.wallet.WalletA;
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     moveToReport();
                     break;
                 case R.id.settings:
-                    loadFragment(new settingF());
+                    startActivity(new Intent(this, UserSettingA.class));
                     binding.drawerLayout.closeDrawer(Gravity.LEFT);
                     break;
                 case R.id.askQuery:
