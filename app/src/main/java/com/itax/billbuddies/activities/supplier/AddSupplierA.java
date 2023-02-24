@@ -7,10 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import com.itax.billbuddies.R;
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.api.RequestApi;
-import com.itax.billbuddies.databinding.ActivityAddCustomerBinding;
 import com.itax.billbuddies.databinding.ActivityAddSupplierBinding;
 import com.itax.billbuddies.listener.ResponseListener;
 import com.itax.billbuddies.utils.Constants;
@@ -25,11 +23,12 @@ import es.dmoral.toasty.Toasty;
 
 public class AddSupplierA extends AppCompatActivity implements ResponseListener {
     ActivityAddSupplierBinding binding;
-    String pincode, customer_name, gstin, email,state,spinner_status,spinner_bussines_type,spinner_nature_business, spinner_tds_application,address,pancard,session,gender,dob,mob_no,city,openning_balance,notes,credit_time,credit_limit;
+    String pin_code, customer_name, gst_in, email,state,spinner_status, spinner_business_type,spinner_nature_business, spinner_tds_application,address, pan_card,session,gender,dob,mob_no,city, opening_balance,notes,credit_time,credit_limit;
     ArrayList<String> statusList = new ArrayList<>();
-    ArrayList<String> natureBuisnessList = new ArrayList<>();
+    ArrayList<String> businessNatureList = new ArrayList<>();
     ArrayList<String> BusinessTypeList = new ArrayList<>();
     ArrayList<String> TdsAppList = new ArrayList<>();
+    ArrayList<String> genderList = new ArrayList<>();
     Functions functions;
     ArrayAdapter statusAdapter,natureBusinessAdapter,BusinessTypeAdapter,TdsAppAdapter;
 
@@ -43,9 +42,9 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
     }
     private void initView() {
         addtdsappSpiner();
-        addbussinesstypeSpiner();
+        addBusinessTypeSpinner();
         addstatusSpiner();
-        addbusinesTypeSpineer();
+        add_business_type_spinner();
         binding.txtTitle.setText("Add Supplier ");
         binding.imgBack.setOnClickListener(v->{
             finish();
@@ -78,18 +77,19 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
             }
         });
     }
-    private void addbusinesTypeSpineer() {
-        BusinessTypeList.add("Male");
-        BusinessTypeList.add("Female");
-        BusinessTypeList.add("Transgender");
 
-        BusinessTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,BusinessTypeList);
+    private void add_business_type_spinner() {
+        genderList.add("Male");
+        genderList.add("Female");
+        genderList.add("Transgender");
+
+        BusinessTypeAdapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,genderList);
         binding.spinnerBusinessType.setAdapter(BusinessTypeAdapter);
 
         binding.spinnerBusinessType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                gender = BusinessTypeList.get(position);
+                gender = genderList.get(position);
             }
 
             @Override
@@ -98,7 +98,8 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
             }
         });
     }
-    private void addbussinesstypeSpiner() {
+
+    private void addBusinessTypeSpinner() {
         BusinessTypeList.add("2017-2018");
         BusinessTypeList.add("2019-2020");
         BusinessTypeList.add("2021-2022");
@@ -110,7 +111,7 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
         binding.spinnerBusinessType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinner_bussines_type = BusinessTypeList.get(position);
+                spinner_business_type = BusinessTypeList.get(position);
             }
 
             @Override
@@ -120,18 +121,18 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
         });
     }
     private void addnature_businSpiner() {
-        natureBuisnessList.add("2017-2018");
-        natureBuisnessList.add("2019-2020");
-        natureBuisnessList.add("2021-2022");
-        natureBuisnessList.add("2022-2023");
+        businessNatureList.add("2017-2018");
+        businessNatureList.add("2019-2020");
+        businessNatureList.add("2021-2022");
+        businessNatureList.add("2022-2023");
 
-        natureBusinessAdapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,natureBuisnessList);
+        natureBusinessAdapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1, businessNatureList);
         binding.spinnerNatureBusiines.setAdapter(natureBusinessAdapter);
 
         binding.spinnerNatureBusiines.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinner_nature_business = natureBuisnessList.get(position);
+                spinner_nature_business = businessNatureList.get(position);
             }
 
             @Override
@@ -163,22 +164,22 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
     }
 
     private boolean validateInput() {
-        pancard = binding.etPanCard.getText().toString();
+        pan_card = binding.etPanCard.getText().toString();
         customer_name = binding.etCustomerName.getText().toString();
         mob_no = binding.etPhoneNo.getText().toString();
-        spinner_bussines_type = binding.spinnerBusinessType.getSelectedItem().toString();
+        spinner_business_type = binding.spinnerBusinessType.getSelectedItem().toString();
         spinner_status = binding.spinnerStatus.getSelectedItem().toString();
         spinner_nature_business = binding.spinnerNatureBusiines.getSelectedItem().toString();
         spinner_tds_application = binding.spinnerTdsApplication.getSelectedItem().toString();
-        pincode = binding.etPincode.getText().toString();
+        pin_code = binding.etPincode.getText().toString();
         state = binding.etState.getText().toString();
         city = binding.etCity.getText().toString();
         address = binding.etAddress.getText().toString();
-        openning_balance = binding.etOpeningBalance.getText().toString();
+        opening_balance = binding.etOpeningBalance.getText().toString();
         credit_time = binding.etCreditTime.getText().toString();
         credit_limit = binding.etCreditLimited.getText().toString();
 
-        if (pancard.isEmpty()) {
+        if (pan_card.isEmpty()) {
             binding.etPanCard.setError("Please enter pancard");
             binding.etPanCard.requestFocus();
             return false;}
@@ -193,7 +194,7 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
             return false;
 
         }
-        if (pincode.isEmpty()) {
+        if (pin_code.isEmpty()) {
             binding.etPincode.setError("Please enter pincode");
             binding.etPincode.requestFocus();
             return false;
@@ -214,7 +215,7 @@ public class AddSupplierA extends AppCompatActivity implements ResponseListener 
             binding.etAddress.requestFocus();
             return false;
         }
-        if (openning_balance.isEmpty()) {
+        if (opening_balance.isEmpty()) {
             binding.etOpeningBalance.setError("Please enteropening balance");
             binding.etOpeningBalance.requestFocus();
             return false;
