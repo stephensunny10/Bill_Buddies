@@ -2,14 +2,14 @@ package com.itax.billbuddies.api;
 
 public class ApiList {
     public static final String BaseUrl = "https://uat.itaxinfo.com/Api/Service/";
-    public static final String Baseurl ="https://billbuddies.itaxinfo.com/";
+    public static final String Baseurl ="https://sysqbit.com/";
     public static final String LoginUrl = BaseUrl + "UserLogin";
     public static final String RegisterUrl = BaseUrl + "RegisterUser";
     public static final String ForgotPasswordUrl = BaseUrl + "SentForgotpasswordOTP";
     public static final String ResetPassUrl = BaseUrl + "ResetPassword";
     public static final String ProfileUrl = BaseUrl + "GetProfile";
     public static final String ourServicesUrl = BaseUrl + "get_ServiceMaster_List";
-    public static final String addCustomerUrl= Baseurl+"add-customer";
+    public static final String userSettingUrl= Baseurl+"user-settings.php";
     public static final String addSuplierUrl= Baseurl+"add-supplier";
 
     public static final String ITAX_COMPANY = BaseUrl + "GetCompanyList";

@@ -262,7 +262,7 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
         object.put("address",address);*/
 
         RequestApi api = new RequestApi(this, this);
-        api.requestJson(ApiList.addCustomerUrl, object, 101);
+       // api.requestJson(ApiList.addCustomerUrl, object, 101);
     }
     @Override
     public void onResponse(int requestCode, String response) {

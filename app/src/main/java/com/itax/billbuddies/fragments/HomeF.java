@@ -113,7 +113,7 @@ public class HomeF extends Fragment {
 
     private void initView(){
         new Dashboard(getActivity(),view);
-        salesTypeDialog = new SalesTypeDialog(getActivity());
+        salesTypeDialog = new SalesTypeDialog(getContext());
 
         binding.txtChangeAssementYear.setOnClickListener(v->{
             dialog.showDialog();

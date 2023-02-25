@@ -14,6 +14,7 @@ import com.itax.billbuddies.listener.ResponseListener;
 import com.itax.billbuddies.utils.Constants;
 import com.itax.billbuddies.utils.Functions;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -43,7 +44,11 @@ Functions functions;
         });
         binding.btnSubmit.setOnClickListener(v -> {
             if( validateInput()){
-                call_user_update_api();
+                try {
+                    call_user_update_api();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -75,96 +80,130 @@ Functions functions;
             do_you_want_total_out_sale = binding.radioGroupOutsale.getCheckedRadioButtonId();
             do_you_want_notification = binding.radioGroupNotification.getCheckedRadioButtonId();
 
-            /*if (pan_card.isEmpty()) {
-                binding.etPanCard.setError("Please enter pancard");
-                binding.etPanCard.requestFocus();
+            if (purchase_return_invoice_prefix.isEmpty()) {
+                binding.etPurchaseInvoicePrefix.setError("Please enter puchase invoice prefix");
+                binding.etPurchaseInvoicePrefix.requestFocus();
                 return false;}
-            if (customer_name.isEmpty()) {
-                binding.etCustomerName.setError("Please enter customer name");
-                binding.etCustomerName.requestFocus();
+            if (purchase_return_invoice_last_no.isEmpty()) {
+                binding.etPurchaseInvoiceLastNo.setError("Please enter puchase invoice last no");
+                binding.etPurchaseInvoiceLastNo.requestFocus();
                 return false;
             }
-            if (mob_no.isEmpty()) {
-                binding.etPhoneNo.setError("Please enter mobile number");
-                binding.etPhoneNo.requestFocus();
-                return false;
-
-            }
-            if (pin_code.isEmpty()) {
-                binding.etPincode.setError("Please enter pincode");
-                binding.etPincode.requestFocus();
+            if (purchase_return_invoice_prefix.isEmpty()) {
+                binding.etPurchaseInvoicePrefix.setError("Please enter purchase return invoice prefix");
+                binding.etPurchaseInvoicePrefix.requestFocus();
                 return false;
 
             }
-            if (state.isEmpty()) {
-                binding.etState.setError("Please enter state");
-                binding.etState.requestFocus();
+            if (purchase_return_invoice_last_no.isEmpty()) {
+                binding.etPurReturnInvLastNo.setError("Please enter purchase return last no");
+                binding.etPurReturnInvLastNo.requestFocus();
+                return false;
+
+            }
+            if (sales_invoice_prefix.isEmpty()) {
+                binding.etSalesInvoicePrefix.setError("Please sales invoice prefix");
+                binding.etSalesInvoicePrefix.requestFocus();
                 return false;
             }
-            if (city.isEmpty()) {
-                binding.etCity.setError("Please enter city");
-                binding.etCity.requestFocus();
+            if (sales_invoice_last_no.isEmpty()) {
+                binding.etSalesInvoiceLastNo.setError("Please enter sales invoice last no");
+                binding.etSalesInvoiceLastNo.requestFocus();
                 return false;
             }
-            if (address.isEmpty()) {
-                binding.etAddress.setError("Please enter address");
-                binding.etAddress.requestFocus();
+            if (sales_performa_invoice_last_no.isEmpty()) {
+                binding.etSalesPerfInvoiceLastNo.setError("Please enter sales performa invoice last no");
+                binding.etSalesPerfInvoiceLastNo.requestFocus();
                 return false;
             }
-            if (opening_balance.isEmpty()) {
-                binding.etOpeningBalance.setError("Please enteropening balance");
-                binding.etOpeningBalance.requestFocus();
+            if (sales_fixed_asset_invoice_last_no.isEmpty()) {
+                binding.etSalesFixedAsset.setError("Please entersales fixed asset");
+                binding.etSalesFixedAsset.requestFocus();
                 return false;
             }
-            if (credit_limit.isEmpty()) {
-                binding.etCreditLimited.setError("Please enter credit limit");
-                binding.etCreditLimited.requestFocus();
+            if (sales_stock_transfer_invoice_last_no.isEmpty()) {
+                binding.etSalesStockTransfer.setError("Please enter stock transfer");
+                binding.etSalesStockTransfer.requestFocus();
                 return false;
             }
-            if (credit_time.isEmpty()) {
-                binding.etCreditTime.setError("Please enter credit time");
-                binding.etCreditTime.requestFocus();
+            if (sales_retail_invoice_last_no.isEmpty()) {
+                binding.etSalesRetailInvoiceLastNo.setError("Please enter sales retailer");
+                binding.etSalesRetailInvoiceLastNo.requestFocus();
                 return false;
             }
-            if (notes.isEmpty()) {
-                binding.etNotes.setError("Please enter notes");
-                binding.etNotes.requestFocus();
+            if (sales_export_invoice_last_no.isEmpty()) {
+                binding.etSalesExportInvoiceLastNo.setError("Please enter sales export invoice");
+                binding.etSalesExportInvoiceLastNo.requestFocus();
+                return false;
+            }
+            if (sales_delivery_ch_invoice_last_no.isEmpty()) {
+                binding.etSalesDeliveryChallan.setError("Please enter sales delivery challan");
+                binding.etSalesDeliveryChallan.requestFocus();
                 return false;
             }
 
-        */return true;
+            if (sales_rcm_invoice_last_no.isEmpty()) {
+                binding.etSalesRcmInvoice.setError("Please enter saled rcm invoice");
+                binding.etSalesRcmInvoice.requestFocus();
+                return false;
+            }
+
+            if (sales_fixed_asset_invoice_last_no.isEmpty()) {
+                binding.etSalesFixedAsset.setError("Please enter sales fixed");
+                binding.etSalesFixedAsset.requestFocus();
+                return false;
+            }
+
+           /* if (use_authorised_sig_image.isEmpty()) {
+                binding.etUseAuthorisedSigImage.setError("Please select image");
+                binding.etUseAuthorisedSigImage.requestFocus();
+                return false;
+            }
+*/
+
+            return true;
     }
 
-        private void call_user_update_api(){
-            binding.pb.setVisibility(View.VISIBLE);
+        private void call_user_update_api() throws JSONException {
+            functions.showLoading();
             HashMap<String, String> params = new HashMap<String, String>();
             params.put("Content-Type", "application/json; charset=UTF-8");
             params.put("token", Constants.UAT_ACCESS_TOKEN);
             //input your API parameters
             JSONObject object = new JSONObject();
-       /* object.put("LoginId", "ITIC-00000007");//sessionManager.getloginId());
-        object.put("Company_Id","COM00000023"); // sessionManager.getCompanyId());
-        object.put("name",customer_name);
-        object.put("session_fin_year",session);
-        object.put("father_name",father_name);
-        object.put("mother_name",mother_name);
-        object.put("pan_card",pancard);
-        object.put("gender",gender);
-        object.put("mobile_number",mob_no);
-        object.put("email","anjalik@gmail.com");
-        object.put("dob",dob);
-        object.put("doj",doj);
-        object.put("pin",pincode);
-        object.put("city",city);
-        object.put("state",state);
-        object.put("address",address);*/
-
+            object.put("LoginId", "ITIC-00000007");//sessionManager.getloginId());
+            object.put("Company_Id", "COM00000023"); // sessionManager.getCompanyId());
+            object.put("id", "581");
+            object.put("session_fin_year", "2022-2023");
+            object.put("purchase_invoice_prefix", purchase_invoice_prefix);
+            object.put("purchase_invoice_last_no",purchase_invoice_last_no);
+            object.put("purchase_invoice_total_allot", "59");
+            object.put("purchase_return_invoice_prefix", purchase_return_invoice_prefix);
+            object.put("purchase_return_invoice_last_no", purchase_return_invoice_last_no);
+            object.put("purchase_return_invoice_total_allot", "88");
+            object.put("sales_invoice_prefix", sales_invoice_prefix);
+            object.put("sales_return_invoice_last_no", sales_retail_invoice_last_no);
+            object.put("sales_return_invoice_total_allot", sales_return_invoice_prefix);
+            object.put("sales_performa_invoice_last_no", sales_performa_invoice_last_no);
+            object.put("sales_retail_invoice_last_no", sales_retail_invoice_last_no);
+            object.put("sales_export_invoice_last_no", sales_export_invoice_last_no);
+            object.put("sales_dc_invoice_last_no", sales_delivery_ch_invoice_last_no);
+            object.put("sales_rcm_invoice_last_no", sales_rcm_invoice_last_no);
+            object.put("sales_st_invoice_last_no", sales_stock_transfer_invoice_last_no);
+            object.put("sales_fa_invoice_last_no", sales_fixed_asset_invoice_last_no);
+            object.put("license_expiry","yes");
+            object.put("use_atuthorized_signatory_image", "yes");
+            object.put("atuthorized_signatory_image", "yes");
+            object.put("terms_conditions","yes");
+            object.put("invoice_footer_text", "yes");
+            object.put("item_wise_discount","yes");
+            object.put("bill_wise_discount","yes");
             RequestApi api = new RequestApi(this, this);
-            api.requestJson(ApiList.addCustomerUrl, object, 101);
+            api.requestJson(ApiList.userSettingUrl, object, 101);
         }
         @Override
         public void onResponse(int requestCode, String response) {
-            binding.pb.setVisibility(View.GONE);
+            functions.hideLoading();
             verifyAuth(response);
         }
 
@@ -174,7 +213,7 @@ Functions functions;
         }
         private void verifyAuth(String response) {
             // RegisterModel model = new Gson().fromJson(response,RegisterModel.class);
-            Toasty.success(this, "Add Customer").show();
+            Toasty.success(this, "Add user setting").show();
             //functions.showSuccess("Profile Picture Uploaded");
 
         }

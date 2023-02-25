@@ -16,9 +16,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:contentInsetStart="0dp"
             android:background="@drawable/gradient_white"
+            app:contentInsetStart="0dp"
             app:popupTheme="@style/AppTheme.AppBarOverlay">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -40,15 +41,123 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/img_back"
-                    android:text="@string/app_name"
+                    android:text="@string/purchase"
                     android:textColor="@color/deep_blue"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/img_filter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_outline_filter_alt_24"
+                    android:text="@string/upload_signature"
+                    android:textColor="@color/black" />
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/search_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/lFilter1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbar"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <FrameLayout
+                android:id="@+id/lSelectstatus"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_input">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="6dp"
+                    android:padding="4dp"
+                    android:text="@string/select_supplier" />
+
+                <Spinner
+                    android:id="@+id/spinner_supplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lFilter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbar"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/et_calender_from"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                android:focusableInTouchMode="false"
+                android:hint="From Date"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <EditText
+                android:id="@+id/et_calender_to"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                android:focusableInTouchMode="false"
+                android:hint="To Date"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/outline_color"
+            android:text="@string/search" />
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -81,23 +190,23 @@
 
         <LinearLayout
             android:id="@+id/empty_layout"
-            android:visibility="gone"
-            android:layout_centerInParent="true"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            android:visibility="gone">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/img_empty"/>
+                android:src="@drawable/img_empty" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No data found"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:text="No data found" />
         </LinearLayout>
     </RelativeLayout>
 

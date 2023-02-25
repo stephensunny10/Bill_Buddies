@@ -67,17 +67,145 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp">
+        <LinearLayout
+            android:id="@+id/search_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/lFilter1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/appbar"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <FrameLayout
+                    android:id="@+id/lSelectstatus"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_border_input">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_status"
+                        android:layout_marginStart="3dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinner_party"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"/>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/lSelectCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_border_input">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/party_name"
+                        android:layout_marginStart="3dp"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_party_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+            android:id="@+id/lFilter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/appbar"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/lItem_name"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_input">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bill_in_no"
+                    android:gravity="center"
+                    android:textSize="12dp"/>
+
+            </FrameLayout>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+            <EditText
+                android:focusableInTouchMode="false"
+                android:id="@+id/et_calender_from"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="From Date"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:layout_weight="1"
+                android:paddingEnd="8dp"
+                android:drawableEnd="@drawable/ic_baseline_calendar_month_24"/>
+
+                <EditText
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/et_calender_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="To Date"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:drawableEnd="@drawable/ic_baseline_calendar_month_24"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:background="@color/outline_color"
+                android:layout_marginHorizontal="15dp"/>
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/recycler_view"/>
-
+            android:layout_margin="6dp"
+            />
         <ProgressBar
             android:id="@+id/pb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true" />
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"

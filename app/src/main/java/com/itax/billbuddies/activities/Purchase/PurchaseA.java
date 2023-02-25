@@ -1,6 +1,7 @@
 package com.itax.billbuddies.activities.Purchase;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.itax.billbuddies.controller.Purchase;
 import com.itax.billbuddies.databinding.ActivityPurchaseBinding;
@@ -34,6 +35,10 @@ public class PurchaseA extends AppCompatActivity {
 
         binding.imgBack.setOnClickListener(v->{
             finish();
+        });
+        binding.imgFilter.setOnClickListener(v -> {
+            if(!binding.searchLay.isShown())
+            binding.searchLay.setVisibility(View.VISIBLE);
         });
     }
 

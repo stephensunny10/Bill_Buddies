@@ -159,7 +159,7 @@
     <string name="tax_name">Tax Name</string>
     <string name="tax_percentage">Tax Percentage</string>
     <string name="add_customer">Add Customer</string>
-  <!--  TODO:Usesetting-->
+    <!--  TODO:Usesetting-->
     <string name="purchase_invoice_prefix">Purchase Invoice Prefix</string>
     <string name="purchase_invoice_last_no">Purchase Invoice Last No.</string>
     <string name="purchase_return_invoice_prefix">  Purchase Return Invoice Prefix</string>
@@ -187,5 +187,22 @@
     <string name="do_you_want_notification">Do you want Notification for outsanding amount day By day</string>
     <string name="purchase_return_invoice_last_no">Purchase Return Invoice Last No</string>
     <string name="user_setting">User Setting</string>
+    <string name="party_name">Party Name</string>
+    <string name="bill_in_no">Bill Invoice No</string>
+    <string name="sale_detail">Sale Details</string>
+    <string name="sales_date">Sale Date</string>
+    <string name="sales_invoice_id">Sale Invoice Id</string>
+    <string name="sale_status">Sale Status</string>
+    <string name="reference_no">Reference No</string>
+    <string name="total">Total</string>
+    <string name="paid">Paid</string>
+    <string name="due">Due</string>
+    <string name="payment_status">Payment Status</string>
+    <string name="share">Share</string>
+    <string name="action">Action</string>
+    <string name="purchase_invoice_id">Purchase Invoice Id</string>
+    <string name="purchase_status">Purchase Status</string>
+    <string name="purchase_detail">Purchase Detail</string>
+    <string name="select_supplier">Select Supplier</string>
 
 </resources>

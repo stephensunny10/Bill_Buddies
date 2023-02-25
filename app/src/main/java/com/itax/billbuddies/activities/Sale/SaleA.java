@@ -3,6 +3,7 @@ package com.itax.billbuddies.activities.Sale;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.itax.billbuddies.controller.Sales;
 import com.itax.billbuddies.databinding.ActivitySaleBinding;
@@ -34,10 +35,16 @@ public class SaleA extends AppCompatActivity {
         binding.fab.setOnClickListener(v->{
             moveToAddSales();
         });
-        binding.imgFilter.setOnClickListener(v -> {
+ /*       binding.imgFilter.setOnClickListener(v -> {
             filterSaleListDialog = new FilterSaleListDialog(SaleA.this);
             filterSaleListDialog.showDialog();
-                });
+                });*/
+        binding.imgFilter.setOnClickListener(v -> {
+            if(!binding.searchLay.isShown())
+                binding.searchLay.setVisibility(View.VISIBLE);
+            else
+            binding.searchLay.setVisibility(View.GONE);
+        });
 
         binding.imgBack.setOnClickListener(v->{
             finish();
