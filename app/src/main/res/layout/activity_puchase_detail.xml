@@ -41,285 +41,331 @@
                     android:text="@string/purchase_detail"
                     android:layout_toRightOf="@+id/img_back"
                     android:textColor="@color/deep_blue"
-                    android:textSize="14sp"
+                   
                     android:textStyle="bold" />
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <LinearLayout
-            android:id="@+id/parent_layout"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/purchase_date" />
-            <EditText
-                android:id="@+id/et_purchase_date"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/purchase_invoice_id"/>
-            <EditText
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:outlineSpotShadowColor="@color/green_color"
+            app:cardCornerRadius="4dp">
 
-                android:id="@+id/et_purchases_invoice_id"
+            <LinearLayout
+                android:id="@+id/parent_layout"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/purchase_status"/>
-            <EditText
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_border_green"
+                android:padding="20dp">
 
-                android:id="@+id/et_purchase_status"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.8"
+                        android:text="@string/purchase_date"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_purchase_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier_invoice_date"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.8"
+                        android:text="@string/purchase_invoice_id"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_purchases_invoice_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/purchase_invoice_id"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/supplier_invoice_no"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_supplier_invoice_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/supplier_invoice_date"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_supplier_invoice_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
 
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/supplier_name"/>
+                        />
+                </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_supplier_name"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/supplier_invoice_no"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
 
-            <EditText
-                android:id="@+id/et_supplier_invoice_no"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input"
-                android:maxLength="12"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color" />
+                        android:layout_weight="0.8"
+                        android:text="@string/total"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/supplier_invoice_date"/>
-            <EditText
-                android:id="@+id/et_supplier_invoice_date"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/total"/>
-            <EditText
-                android:id="@+id/et_total"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
+                    <TextView
+                        android:id="@+id/et_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/paid"/>
-            <EditText
-                android:id="@+id/et_paid"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/due"/>
-            <EditText
-                android:id="@+id/et_due"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/payment_status"/>
-            <EditText
-                android:id="@+id/et_payment_status"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/share"/>
-            <EditText
-                android:id="@+id/et_share"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/action"/>
-            <EditText
-                android:id="@+id/et_action"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="Credit Limit(in rupies)"/>
-            <EditText
-                android:id="@+id/et_credit_limited"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <Spinner
-                android:id="@+id/spinner_tds_application"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="16dp" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="Notes"/>
-            <EditText
-                android:id="@+id/et_notes"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-              android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input" />
-            <Button
-                android:id="@+id/btn_submit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-                android:background="@color/blue"
-                android:textColor="@color/white"
-                android:text="Submit"/>
-        </LinearLayout>
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/paid"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/due"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_due"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/payment_status"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_payment_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/share"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="0.8"
+                        android:text="@string/action"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/et_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.2"
+                        android:text="@string/supplier"
+                    android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </ScrollView>
+
 
 </LinearLayout>
