@@ -14,7 +14,7 @@
     <color name="shadow_color">#03A9F4</color>
     <color name="light_black">#797777</color>
     <color name="light_grey">#EFEFEF</color>
-
+    <color name="light_blue">#C14D30C3</color>
     <color name="blue">#482CBC</color>
     <color name="page_bg_color">#E7E9F8</color>
     <color name="layout_bg_color">#F3F7F8</color>

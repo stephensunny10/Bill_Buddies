@@ -49,6 +49,10 @@ public class SalesAdapter extends RecyclerView.Adapter<SalesAdapter.ViewHolder>{
             holder.total_txt.setText(item.total);
             holder.paid_txt.setText(item.total_paid_amount);
             holder.payment_status_txt.setText(item.status);
+            holder.parent_layout.setOnClickListener(v->{
+
+                listener.onClick(position);
+            });
         }
     }
 
@@ -71,6 +75,7 @@ public class SalesAdapter extends RecyclerView.Adapter<SalesAdapter.ViewHolder>{
             paid_txt = itemView.findViewById(R.id.txt_paid);
             payment_status_txt = itemView.findViewById(R.id.txt_payment_status);
             parent_layout = itemView.findViewById(R.id.parent_layout);
+
         }
     }
 

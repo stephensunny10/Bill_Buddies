@@ -16,8 +16,6 @@ public class SaleA extends AppCompatActivity {
     SalesTypeDialog salesTypeDialog;
     FilterSaleListDialog filterSaleListDialog;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

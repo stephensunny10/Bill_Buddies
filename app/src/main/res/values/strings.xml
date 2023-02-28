@@ -204,5 +204,13 @@
     <string name="purchase_status">Purchase Status</string>
     <string name="purchase_detail">Purchase Detail</string>
     <string name="select_supplier">Select Supplier</string>
+    <string name="tax_amount">Tax Amount</string>
+    <string name="other_chargers">Other Charges</string>
+    <string name="shipping_charges">Shipping Charges</string>
+    <string name="subtotal">Sub Total</string>
+    <string name="discount">Discount</string>
+    <string name="different_shipping_detail">Different Shipping detail</string>
+    <string name="perform_to_tax">Performa To tax</string>
+    <string name="invoice_discount">Invoice Discount</string>
 
 </resources>
