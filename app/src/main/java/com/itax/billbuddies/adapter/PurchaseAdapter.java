@@ -50,6 +50,9 @@ public class PurchaseAdapter extends RecyclerView.Adapter<PurchaseAdapter.ViewHo
             holder.paid_txt.setText(item.total_paid_amount);
             holder.dues_txt.setText(item.total_due_amount);
             holder.payment_status_txt.setText(item.status);
+            holder.parent_layout.setOnClickListener(v -> {
+                listener.onClick(position);
+            });
         }
     }
 

@@ -50,7 +50,6 @@ public class SalesAdapter extends RecyclerView.Adapter<SalesAdapter.ViewHolder>{
             holder.paid_txt.setText(item.total_paid_amount);
             holder.payment_status_txt.setText(item.status);
             holder.parent_layout.setOnClickListener(v->{
-
                 listener.onClick(position);
             });
         }

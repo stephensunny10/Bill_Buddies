@@ -95,7 +95,7 @@
     <string name="add_payment_detail">Add Payment Detail</string>
     <string name="add_payment">Add Payment</string>
 
-    <string name="customer_name">Coustomer Name</string>
+    <string name="customer_name">Customer Name</string>
     <string name="select_sales_date">Select Sales Date</string>
     <string name="select_status"> Select  Status</string>
     <string name="Enter_refno">Enter Reference No./ Po Order No.</string>
@@ -212,5 +212,8 @@
     <string name="different_shipping_detail">Different Shipping detail</string>
     <string name="perform_to_tax">Performa To tax</string>
     <string name="invoice_discount">Invoice Discount</string>
+    <string name="add_supplier">Add Supplier</string>
+    <string name="select_bussiness_type">Select Bussiness Type</string>
+    <string name="select_nature_business">Select Nature Of Bussiness</string>
 
 </resources>

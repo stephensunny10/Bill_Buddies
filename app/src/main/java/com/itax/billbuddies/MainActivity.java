@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.itax.billbuddies.activities.Auth.LoginA;
 import com.itax.billbuddies.activities.Customer.AddCustomerA;
+import com.itax.billbuddies.activities.Customer.CustomerA;
 import com.itax.billbuddies.activities.Item.ItemActivity;
 import com.itax.billbuddies.activities.ListA;
 import com.itax.billbuddies.activities.Purchase.PurchaseA;
@@ -128,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                     moveToPurchase();
                     break;
                 case R.id.customer:
-                    startActivity(new Intent(this, AddCustomerA.class));
+                    startActivity(new Intent(this, CustomerA.class));
                     break;
                 case R.id.supplier:
                     startActivity(new Intent(this, AddSupplierA.class));

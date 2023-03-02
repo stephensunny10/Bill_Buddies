@@ -1,4 +1,4 @@
-package com.itax.billbuddies.activities.Purchase;
+package com.itax.billbuddies.activities.Customer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,33 +6,33 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.itax.billbuddies.databinding.ActivityPuchaseDetailBinding;
-import com.itax.billbuddies.models.PurchaseItem;
+import com.itax.billbuddies.databinding.ActivityCustomerDetailBinding;
+import com.itax.billbuddies.models.CustomerModel;
 
-public class PuchaseDetailA extends AppCompatActivity {
-    PurchaseItem model;
-    ActivityPuchaseDetailBinding binding;
+
+public class CustomerDetailActivity extends AppCompatActivity {
+   ActivityCustomerDetailBinding binding;
+   CustomerModel.Customer model;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityPuchaseDetailBinding.inflate(getLayoutInflater());
+        binding = ActivityCustomerDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         if (getIntent().getStringExtra("data") != null){
             String data = getIntent().getStringExtra("data");
             Log.e("purchasedata", "onCreate: "+data );
-            model = new Gson().fromJson(data, PurchaseItem.class);
+            model = new Gson().fromJson(data, CustomerModel.Customer.class);
             setData(model);
             binding.imgBack.setOnClickListener(v -> {
                 finish();
             });
         }
     }
-
-    private void setData(PurchaseItem data) {
-        binding.txtReferenceNo.setText(data.reference_no);
-        binding.paymentStatus.setText(data.status);
-        binding.txtPurchaseDate.setText(data.purchase_date);
-        //binding.txtCustomerName.setText(data.);
+    private void setData(CustomerModel.Customer data) {
+        binding.sessionFinYear.setText(data.reference_no);
+        binding.paymentType.setText(data.status);
+        binding.txtDate.setText(data.purchase_date);
+        binding.txtDueDate.setText(data.due_date);
         binding.txtDiscount.setText(data.discount_amount);
         binding.txtInvoiceDiscunt.setText(data.invoice_discount);
         binding.txtDue.setText(data.total_due_amount);

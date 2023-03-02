@@ -59,7 +59,6 @@
             android:orientation="vertical"
             android:padding="20dp">
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -78,6 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:text="@string/GSTIN"/>
             <EditText
@@ -94,6 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:text="@string/customer_name"/>
             <EditText
@@ -143,25 +144,45 @@
                 android:maxLength="12"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color" />
-
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/select_status"/>
             <Spinner
                 android:id="@+id/spinner_status"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/select_bussiness_type"/>
             <Spinner
                 android:id="@+id/spinner_business_type"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/select_nature_business"/>
             <Spinner
                 android:id="@+id/spinner_nature_busiines"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="5dp" />
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
@@ -190,7 +211,6 @@
                 android:id="@+id/et_city"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:focusableInTouchMode="false"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
@@ -208,7 +228,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:focusableInTouchMode="false"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
@@ -283,7 +302,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="5dp" />
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
@@ -305,8 +324,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:layout_margin="10dp"
-                android:background="@color/blue"
+                android:layout_marginVertical="10dp"
+                android:background="@color/colorPrimaryDark"
                 android:textColor="@color/white"
                 android:text="Submit"/>
         </LinearLayout>

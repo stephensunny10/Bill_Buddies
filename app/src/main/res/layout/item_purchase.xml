@@ -12,6 +12,7 @@
     android:outlineSpotShadowColor="@color/orange">
 
     <LinearLayout
+        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

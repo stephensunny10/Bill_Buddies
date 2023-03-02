@@ -9,11 +9,14 @@ import android.widget.ArrayAdapter;
 
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.api.RequestApi;
+import com.itax.billbuddies.database.PaperDbManager;
 import com.itax.billbuddies.databinding.ActivityAddCustomerBinding;
 import com.itax.billbuddies.listener.ResponseListener;
 import com.itax.billbuddies.utils.Constants;
 import com.itax.billbuddies.utils.Functions;
+import com.itax.billbuddies.utils.SessionManager;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -30,7 +33,7 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
     ArrayList<String> TdsAppList = new ArrayList<>();
     Functions functions;
     ArrayAdapter statusAdapter,natureBusinessAdapter,BusinessTypeAdapter,TdsAppAdapter;
-
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
         binding = ActivityAddCustomerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         functions = new Functions(this);
+        sessionManager = new SessionManager(this);
         initView();
     }
     private void initView() {
@@ -45,14 +49,20 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
         addbussinesstypeSpiner();
         addstatusSpiner();
         addbusinesTypeSpineer();
+        add_nature_of_business();
         binding.txtTitle.setText("Add Customer ");
         binding.imgBack.setOnClickListener(v->{
             finish();
         });
         binding.btnSubmit.setOnClickListener(v -> {
+
             if( validateInput()){
-                call_add_customer_api();
-            }
+                try {
+                    call_add_customer_api();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+           }
         });
 
     }
@@ -177,6 +187,7 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
         opening_balance = binding.etOpeningBalance.getText().toString();
         credit_time = binding.etCreditTime.getText().toString();
         credit_limit = binding.etCreditLimited.getText().toString();
+        notes = binding.etNotes.getText().toString();
 
         if (pan_card.isEmpty()) {
             binding.etPanCard.setError("Please enter pancard");
@@ -237,32 +248,48 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
             return true;
     }
 
-    private void call_add_customer_api(){
+    private void call_add_customer_api() throws JSONException {
         binding.pb.setVisibility(View.VISIBLE);
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("Content-Type", "application/json; charset=UTF-8");
         params.put("token", Constants.UAT_ACCESS_TOKEN);
         //input your API parameters
         JSONObject object = new JSONObject();
-       /* object.put("LoginId", "ITIC-00000007");//sessionManager.getloginId());
-        object.put("Company_Id","COM00000023"); // sessionManager.getCompanyId());
-        object.put("name",customer_name);
+        object.put("loginID", "TIC-00005161");//sessionManager.getloginId());
+        object.put("company_id","COM00000001"); // sessionManager.getCompanyId());
+        object.put("pan",customer_name);
         object.put("session_fin_year",session);
-        object.put("father_name",father_name);
-        object.put("mother_name",mother_name);
-        object.put("pan_card",pancard);
-        object.put("gender",gender);
-        object.put("mobile_number",mob_no);
-        object.put("email","anjalik@gmail.com");
+        object.put("ccode","0");
+        object.put("business_type",spinner_business_type);
+        object.put("nature_of_business","59");
+        object.put("registration_no","U25203HR2006PTC069888");
+        object.put("registration_date","2021-04-01");
+        object.put("fname",customer_name);
         object.put("dob",dob);
-        object.put("doj",doj);
-        object.put("pin",pincode);
+        object.put("mobile",mob_no);
+        object.put("email",email);
         object.put("city",city);
         object.put("state",state);
-        object.put("address",address);*/
+        object.put("address",address);
+        object.put("gender",gender);
+        object.put("pan",pan_card);
+        object.put("gstin",gstin);
+        object.put("wallet_balance","0");
+        object.put("due_balance","0");
+        object.put("notes",notes);
+        object.put("status",spinner_status);
+        object.put("credit_time",credit_time);
+        object.put("tds_bill_applicable",spinner_tds_application);
+        object.put("tanno","4747388737");
+        object.put("date_created","2021-04-01 14:14:36");
+        object.put("updatedBy","ITIC-00105928");
+        object.put("date_modified","2021-04-01 14:16:04");
+        object.put("tds_amount","393993");
 
+       // String url = ApiList.addCustomerUrl+"?loginID="+ PaperDbManager.getLoginData().loginID+"&company_id="+PaperDbManager.getCompany().Company_Id;
+        String url = ApiList.CUSTOMER_URL+"?loginID="+"ITIC-00005161"+"&company_id="+"COM00000001";
         RequestApi api = new RequestApi(this, this);
-       // api.requestJson(ApiList.addCustomerUrl, object, 101);
+         api.requestJson(url, object, 101);
     }
     @Override
     public void onResponse(int requestCode, String response) {

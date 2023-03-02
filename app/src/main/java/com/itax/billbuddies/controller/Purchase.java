@@ -1,6 +1,7 @@
 package com.itax.billbuddies.controller;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -13,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
+import com.itax.billbuddies.activities.Purchase.PuchaseDetailA;
 import com.itax.billbuddies.adapter.PurchaseAdapter;
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.database.PaperDbManager;
@@ -43,6 +45,7 @@ public class Purchase {
         recyclerView = view.findViewById(R.id.recycler_view);
         pb = view.findViewById(R.id.pb);
         adapter = new PurchaseAdapter(context, itemList, position -> {
+            moveNext(position);
             // clicked item
         });
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
@@ -61,7 +64,10 @@ public class Purchase {
         }
         adapter.notifyDataSetChanged();
     }
-
+    private void moveNext(int position){
+        String Purcahse_data = new Gson().toJson(itemList.get(position));
+        context.startActivity(new Intent(context, PuchaseDetailA.class).putExtra("data",Purcahse_data));
+    }
     private void callApi(){
         pb.setVisibility(View.VISIBLE);
         String url = ApiList.PURCHASE_URL+"?loginID="+ PaperDbManager.getLoginData().loginID+"&company_id="+PaperDbManager.getCompany().Company_Id;
