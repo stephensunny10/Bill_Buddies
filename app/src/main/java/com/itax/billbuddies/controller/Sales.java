@@ -77,7 +77,7 @@ public class Sales {
     private void callApi(){
 
         pb.setVisibility(View.VISIBLE);
-        String url = ApiList.SALES_URL+"?loginID="+"ITIC-00005161" +"&company_id="+"COM00000001";
+        String url = ApiList.SALES_URL + "?loginID=" + PaperDbManager.getLoginData().loginID + "&company_id=" + PaperDbManager.getCompany().Company_Id;
         //url = ApiList.SALES_URL+"?loginID="+"ITIC-00000002"+"&company_id="+"COM00001828";
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         StringRequest request = new StringRequest(url, response -> {

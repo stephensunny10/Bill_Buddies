@@ -1,4 +1,4 @@
-package com.itax.billbuddies.activities.Customer;
+package com.itax.billbuddies.activities.supplier;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,29 +6,28 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.itax.billbuddies.databinding.ActivityCustomerDetailBinding;
-import com.itax.billbuddies.models.CustomerModel;
+import com.itax.billbuddies.databinding.ActivitySupplierDetailBinding;
 import com.itax.billbuddies.models.SupplierModel;
 
-public class CustomerDetailActivity extends AppCompatActivity {
-   ActivityCustomerDetailBinding binding;
-   CustomerModel.Customer model;
+public class SupplierDetailA extends AppCompatActivity {
+    ActivitySupplierDetailBinding binding;
+    SupplierModel.Supplier model;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityCustomerDetailBinding.inflate(getLayoutInflater());
+        binding = ActivitySupplierDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         if (getIntent().getStringExtra("data") != null){
             String data = getIntent().getStringExtra("data");
-            Log.e("customer", "onCreate: "+data );
-            model = new Gson().fromJson(data, CustomerModel.Customer.class);
+            Log.e("Supplierdata", "onCreate: "+data );
+            model = new Gson().fromJson(data, SupplierModel.Supplier.class);
             setData(model);
             binding.imgBack.setOnClickListener(v -> {
                 finish();
             });
         }
     }
-    private void setData(CustomerModel.Customer data) {
+    private void setData(SupplierModel.Supplier data) {
         binding.sessionFinYear.setText(data.session_fin_year);
         binding.txtAmount.setText(data.due_balance);
         binding.txtCreditDate.setText(data.date_created);

@@ -19,6 +19,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activities.supplier.SupplierDetailA"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.Customer.CustomerDetailActivity"
             android:exported="false">
             <meta-data
@@ -54,7 +61,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.supplier.SupplierActivity"
+            android:name=".activities.supplier.SupplierA"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

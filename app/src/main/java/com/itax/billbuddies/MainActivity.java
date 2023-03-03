@@ -28,6 +28,7 @@ import com.itax.billbuddies.activities.reciept.ReceiptA;
 import com.itax.billbuddies.activities.setting.UserSettingA;
 import com.itax.billbuddies.activities.setting.settingF;
 import com.itax.billbuddies.activities.supplier.AddSupplierA;
+import com.itax.billbuddies.activities.supplier.SupplierA;
 import com.itax.billbuddies.activities.wallet.WalletA;
 import com.itax.billbuddies.controller.ITaxCompanyList;
 import com.itax.billbuddies.controller.NavMenu;
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(this, CustomerA.class));
                     break;
                 case R.id.supplier:
-                    startActivity(new Intent(this, AddSupplierA.class));
+                    startActivity(new Intent(this, SupplierA.class));
                     break;
                 case R.id.item:
                     moveToItem();

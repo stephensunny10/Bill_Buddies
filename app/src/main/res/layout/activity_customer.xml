@@ -69,4 +69,24 @@
         android:layout_marginBottom="20dp"
         android:src="@drawable/ic_baseline_add_24"
         app:backgroundTint="@color/orange" />
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_empty"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data found"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
 </RelativeLayout>

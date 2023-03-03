@@ -4,14 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class CustomerModel {
+public class SupplierModel {
     public boolean success;
     public String message;
     @SerializedName("data")
-    public ArrayList<Customer> data;
+    public ArrayList<Supplier> data;
 
-
-    public static class Customer{
+    public static class Supplier{
         public String id;
         public String loginID;
         public String company_id;
@@ -44,4 +43,5 @@ public class CustomerModel {
         public String date_created;
         public String updatedBy;
         public String date_modified;
-}}
+
+    }}

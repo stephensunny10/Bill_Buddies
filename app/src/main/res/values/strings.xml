@@ -215,5 +215,12 @@
     <string name="add_supplier">Add Supplier</string>
     <string name="select_bussiness_type">Select Bussiness Type</string>
     <string name="select_nature_business">Select Nature Of Bussiness</string>
+    <string name="amount_due">Amount Due</string>
+    <string name="credit_date"> Credit Date</string>
+    <string name="due_date">Due Date</string>
+    <string name="select_tds_app">Select Tds Application</string>
+    <string name="credit_time">Credit Time</string>
+    <string name="register_no">Registration_no</string>
+    <string name="regis_date">Registration Date</string>
 
 </resources>

@@ -17,8 +17,6 @@ import com.itax.billbuddies.adapter.PaymentAdapter;
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.database.PaperDbManager;
 import com.itax.billbuddies.models.PaymentModel;
-import com.itax.billbuddies.models.PurchaseModel;
-import com.itax.billbuddies.models.SalesItem;
 import com.itax.billbuddies.R;
 
 import java.util.ArrayList;
@@ -42,8 +40,10 @@ public class Payment {
     private void initView() {
         recyclerView = view.findViewById(R.id.recycler_view);
         pb = view.findViewById(R.id.pb);
+        Log.d("pay_data", "callApi: "+itemList);
         adapter = new PaymentAdapter(context, itemList, position -> {
             // clicked item
+
         });
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         recyclerView.setHasFixedSize(true);
@@ -66,6 +66,7 @@ public class Payment {
             PaymentModel model = new Gson().fromJson(response,PaymentModel.class);
             if (model.success){
                 itemList.addAll(model.data);
+
                 adapter.notifyDataSetChanged();
             }
             if (itemList.isEmpty()){

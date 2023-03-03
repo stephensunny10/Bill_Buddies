@@ -29,10 +29,10 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/primary_txt_color"
                 android:textSize="12sp"
-                android:text="Invoice Id :"/>
+                android:text="Nmae :"/>
 
             <TextView
-                android:id="@+id/txt_invoice_id"
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -76,10 +76,10 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/primary_txt_color"
                 android:textSize="12sp"
-                android:text="Due Amount:"/>
+                android:text="Address:"/>
 
             <TextView
-                android:id="@+id/txt_due_amount"
+                android:id="@+id/txt_addres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

@@ -14,34 +14,34 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.itax.billbuddies.R;
 import com.itax.billbuddies.listener.ClickListener;
-import com.itax.billbuddies.models.CustomerModel;
+import com.itax.billbuddies.models.SupplierModel;
 
 import java.util.ArrayList;
 
-public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHolder>{
+public class SupplierAdapter  extends RecyclerView.Adapter<SupplierAdapter.ViewHolder>{
     Context context;
     ClickListener listener;
-    ArrayList<CustomerModel.Customer> itemList;
+    ArrayList<SupplierModel.Supplier> itemList  = new ArrayList<>();
 
-    public CustomerAdapter(Context context, ArrayList<CustomerModel.Customer> itemList, ClickListener listener) {
+    public SupplierAdapter(Context context, ArrayList<SupplierModel.Supplier> itemList, ClickListener listener) {
         this.context = context;
         this.itemList = itemList;
         this.listener = listener;
     }
 
     @Override
-    public CustomerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SupplierAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_customer, parent, false);
-        return new CustomerAdapter.ViewHolder(view);
+        return new SupplierAdapter.ViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
-    public void onBindViewHolder(@NonNull CustomerAdapter.ViewHolder holder, int position) {
-        CustomerModel.Customer item = itemList.get(position);
+    public void onBindViewHolder(@NonNull SupplierAdapter.ViewHolder holder, int position) {
+        SupplierModel.Supplier item = itemList.get(position);
         if (item != null){
             holder.name.setText(item.fname);
-            holder.pan.setText(item.pan);
+            holder.pan_no.setText(item.pan);
             holder.address.setText(item.address);
             holder.parent_layout.setOnClickListener(v -> {
                 listener.onClick(position);
@@ -55,12 +55,12 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView name,pan,address;
+        public TextView name,pan_no,address;
         public LinearLayout parent_layout;
         public ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.txt_name);
-            pan = itemView.findViewById(R.id.txt_pan_no);
+            pan_no = itemView.findViewById(R.id.txt_pan_no);
             address = itemView.findViewById(R.id.txt_addres);
             parent_layout = itemView.findViewById(R.id.parent_layout);
         }
@@ -72,3 +72,4 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
     }
 
 }
+

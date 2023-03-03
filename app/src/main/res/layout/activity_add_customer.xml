@@ -141,7 +141,6 @@
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_border_input"
-                android:maxLength="12"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color" />
             <TextView
@@ -214,7 +213,6 @@
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
             <TextView
                 android:layout_marginTop="10dp"
@@ -230,7 +228,6 @@
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
 
             <TextView
@@ -247,7 +244,6 @@
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
             <TextView
                 android:layout_marginTop="10dp"
@@ -297,6 +293,13 @@
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="@string/select_tds_app"/>
             <Spinner
                 android:id="@+id/spinner_tds_application"
                 android:layout_width="match_parent"
@@ -317,7 +320,6 @@
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
             <Button
                 android:id="@+id/btn_submit"
