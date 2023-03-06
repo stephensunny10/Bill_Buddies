@@ -25,6 +25,7 @@ import com.itax.billbuddies.activities.Sale.SaleA;
 import com.itax.billbuddies.activities.category.CategoryA;
 import com.itax.billbuddies.activities.payment.PaymentA;
 import com.itax.billbuddies.activities.reciept.ReceiptA;
+import com.itax.billbuddies.activities.setting.PrintSettingA;
 import com.itax.billbuddies.activities.setting.UserSettingA;
 import com.itax.billbuddies.activities.setting.settingF;
 import com.itax.billbuddies.activities.supplier.AddSupplierA;
@@ -157,8 +158,8 @@ public class MainActivity extends AppCompatActivity {
                     moveToReport();
                     break;
                 case R.id.settings:
-                    startActivity(new Intent(this, UserSettingA.class));
                     binding.drawerLayout.closeDrawer(Gravity.LEFT);
+                    select_setting();
                     break;
                 case R.id.askQuery:
 
@@ -233,6 +234,20 @@ public class MainActivity extends AppCompatActivity {
             moveToLogin();
         });
         builder.setNegativeButton("No", (dialog, id) -> dialog.dismiss());
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+    private void select_setting(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.select_setting);
+        builder.setPositiveButton("Print Setting", (dialog, id) -> {
+            dialog.dismiss();
+            startActivity(new Intent(this, PrintSettingA.class));
+        });
+        builder.setNegativeButton("User Setting", (dialog, id) -> {
+            dialog.dismiss();
+            startActivity(new Intent(this, UserSettingA.class));
+        });
         AlertDialog alert = builder.create();
         alert.show();
     }

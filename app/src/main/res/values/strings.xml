@@ -178,11 +178,12 @@
     <string name="terms_condition"> Terms and Condtions</string>
     <string name="invoice_footer_text">Invoice Footer Text</string>
     <string name="item_wise_discount"> Item Wise Discount</string>
-    <string name="bill_wise_discount">  Bill Wise Discount</string>
+    <string name="bill_wise_discount">Bill Wise Discount</string>
     <string name="tds_applicable">  Tds Applicable</string>
     <string name="cess_applicable">Cess Applicable</string>
-    <string name="eway_bill_applicable">  Eway Bill Applicable</string>
-    <string name="dispatch_though_applicable">  Dispatch Though Applicable</string>
+    <string name="eway_bill_applicable">Eway Bill Applicable</string>
+    <string name="dispatch_though_applicable">Dispatch Though Applicable</string>
+    <string name="dispatch_though_applicable_sale">Dispatch Though Applicable Sale</string>
     <string name="do_you_want_total_out_sale"> Do You want Total Outstaing on Sale Bill</string>
     <string name="do_you_want_notification">Do you want Notification for outsanding amount day By day</string>
     <string name="purchase_return_invoice_last_no">Purchase Return Invoice Last No</string>
@@ -222,5 +223,18 @@
     <string name="credit_time">Credit Time</string>
     <string name="register_no">Registration_no</string>
     <string name="regis_date">Registration Date</string>
+    <string name="item_list">Item List</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_unit">Item Unit</string>
+    <string name="select_setting">Select  Setting</string>
+    <string name="print_setting">Print Setting</string>
+    <string name="tds_applicable_sale">Tds Applicable Sale</string>
+    <string name="cess_applicable_sale">Cess Applicable Sale</string>
+    <string name="eway_bill_applicable_sale">Eway Bill Applicable Sale</string>
+    <string name="eway_bill_applicable_purchase">Eway Bill Applicable Purchase</string>
+    <string name="tds_applicable_purchase">Tds Applicable Purchase</string>
+    <string name="cess_applicable_purchase">Cess Applicable Purchase</string>
+    <string name="total_outstaing_sale">Total Outstanding Sale</string>
+    <string name="dispatch_though_applicable_purchase">Dispatch Though Applicable Purchase</string>
 
 </resources>

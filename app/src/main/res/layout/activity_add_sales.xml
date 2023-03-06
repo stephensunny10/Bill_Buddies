@@ -235,7 +235,474 @@
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_grey"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/item_list"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="@dimen/sp16"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_input"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:text="@string/item_name"
+                android:textSize="@dimen/sp16" />
+
+            <Spinner
+                android:id="@+id/spinner_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/item_unit"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:layout_margin="6dp"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Disc.(%)"/>
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dp"
+        android:background="@drawable/bg_border_input"
+        android:focusableInTouchMode="false"
+        android:text="0.0"
+        android:textAlignment="textEnd"/>
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:weightSum="2"
+    android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Disc.(Rs)"/>
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/bg_border_input"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="0.0"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:weightSum="2"
+              android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tax "/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:background="@drawable/bg_border_input"
+                android:text="0.0"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:weightSum="2"
+    android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tax Amt"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:background="@drawable/bg_border_input"
+                android:text="0.0"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:weightSum="2"
+    android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GST CESS"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:background="@drawable/bg_border_input"
+                android:text="0.0"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:weightSum="2"
+    android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" Taxable Value"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:background="@drawable/bg_border_input"
+                android:text="0.0"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:weightSum="2"
+    android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Amount"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:background="@drawable/bg_border_input"
+                android:text="0.0"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Row"
+                android:layout_marginVertical="5dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_blue"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="Sub Total Taxable Value:"
+                    android:textColor="@color/light_black"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_sub_total_tax_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1.2"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="Total Tax Amount:"
+                    android:textColor="@color/light_black"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_total_tax_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1.2"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="GST CESS Amount:"
+                    android:textColor="@color/light_black"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_cess_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1.2"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/dark_grey"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/light_black"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_sub_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1.2"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="Other Charges:"
+                    android:textColor="@color/light_black"
+                    />
+                <Spinner
+                    android:id="@+id/spinner_other_charges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"/>
+
+                <TextView
+                    android:id="@+id/txt_other_charges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1"
+                    android:text="0.0"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:text="TDS Receivable?"
+                    android:layout_weight="0.4"
+                    android:textColor="@color/light_black"
+                    />
+                <Spinner
+                    android:id="@+id/spinner_tds_receivable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_tds_receivable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:textSize="@dimen/sp16"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+              >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="Grand Total :"
+                    android:textColor="@color/light_black"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_grand_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1.2"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/light_grey"
+                android:background="@drawable/bg_border_green"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="0.8"
+                    android:text="Due :"
+                    android:textColor="@color/wrong_answer"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_due"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp16"
+                    android:layout_weight="1.2"
+                    android:text="0.0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btn_next"
@@ -245,7 +712,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_red_gradient"
                 android:textColor="#fff"
-                android:text="next"/>
+                android:text="Save"/>
         </LinearLayout>
     </ScrollView>
 
