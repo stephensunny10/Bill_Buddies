@@ -1,95 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
     android:orientation="vertical"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    app:cardCornerRadius="10dp"
-    android:outlineSpotShadowColor="@color/orange">
-
+    android:id="@+id/parent_layout"
+    android:layout_height="wrap_content">
     <LinearLayout
-        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-
+        android:layout_height="79dp">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/primary_txt_color"
-                android:textSize="12sp"
-                android:text="Nmae :"/>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img_user"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/img_user"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:layout_weight="4">
 
             <TextView
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:text="Michael"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text="SI:"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/primary_txt_color"
-                android:textSize="12sp"
-                android:text="Pan No:"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_pan_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
+                android:text="#12M"
+                android:textColor="@color/orange"
                 android:textSize="12sp"
-                android:text="SI:"/>
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_name"
+                android:textSize="12sp"
+                android:text="xyz street Flourida USA"
+                android:textColor="@color/light_black" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/primary_txt_color"
-                android:textSize="12sp"
-                android:text="Address:"/>
-
-            <TextView
-                android:id="@+id/txt_addres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text="SI:"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1.5">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/img_edit"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/img_delete"/>
         </LinearLayout>
-
     </LinearLayout>
-
-
-
-</androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:alpha="0.3"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/light_black"/>
+</LinearLayout>
