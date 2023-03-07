@@ -36,24 +36,24 @@ public class PrintSettingA extends AppCompatActivity {
     }
 
     private void initView() {
-        binding.imgBack.setOnClickListener(v->{
+        binding.imgBack.setOnClickListener(v -> {
             finish();
         });
         callApi();
     }
 
-    private void callApi(){
+    private void callApi() {
         functions.showLoading();
-        String url = ApiList.PRINT_SETTING_URL+"?loginID="+ PaperDbManager.getLoginData().loginID+"&company_id="+"COM00000001"+"&session_fin_year="+"2022-2023";
-       // String url =ApiList.PRINT_SETTING_URL+"?loginID="+"ITIC-00005161"+"&company_id="+"COM00000001"+"&session_fin_year="+"2022-2023";
-        Log.d("1233", "callApi: "+url);
+        String url = ApiList.PRINT_SETTING_URL + "?loginID=" + PaperDbManager.getLoginData().loginID + "&company_id=" + "COM00000001" + "&session_fin_year=" + "2022-2023";
+        // String url =ApiList.PRINT_SETTING_URL+"?loginID="+"ITIC-00005161"+"&company_id="+"COM00000001"+"&session_fin_year="+"2022-2023";
+        Log.d("1233", "callApi: " + url);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest request = new StringRequest(url, response -> {
-            Log.d("api", "callApi: "+ response);
+            Log.d("api", "callApi: " + response);
             functions.hideLoading();
 
         }, error -> {
-            Log.d("error", "callApi: "+ error);
+            Log.d("error", "callApi: " + error);
             functions.hideLoading();
         });
         requestQueue.add(request);

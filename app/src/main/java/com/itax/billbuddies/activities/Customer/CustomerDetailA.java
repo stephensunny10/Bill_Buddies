@@ -8,7 +8,6 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.itax.billbuddies.databinding.ActivityCustomerDetailBinding;
 import com.itax.billbuddies.models.CustomerModel;
-import com.itax.billbuddies.models.SupplierModel;
 
 public class CustomerDetailA extends AppCompatActivity {
     ActivityCustomerDetailBinding binding;
@@ -30,25 +29,26 @@ public class CustomerDetailA extends AppCompatActivity {
         initView();
     }
 
-    private void initView(){
+    private void initView() {
         binding.imgBack.setOnClickListener(v -> {
             finish();
         });
     }
 
     private void setData(CustomerModel.Customer data) {
-        binding.sessionFinYear.setText(data.session_fin_year);
-        binding.txtAmount.setText(data.due_balance);
-        binding.txtCreditDate.setText(data.date_created);
-        binding.creditTime.setText(data.credit_time);
         binding.txtName.setText(data.fname);
-        binding.txtMobile.setText("Mobile :" + data.mobile);
-        binding.txtEmail.setText("Email :" + data.email);
+        binding.txtMobile.setText(data.mobile);
+        binding.txtEmail.setText(data.email);
         binding.txtRegDate.setText(data.registration_date);
         binding.txtRegNo.setText(data.registration_no);
         binding.txtGstIn.setText(data.gstin);
         binding.txtTdsApp.setText(data.tdsapplicable);
-        binding.natureOfBusi.setText(data.nature_of_business);
-        binding.txtAddres.setText("Address :" + data.address);
+        binding.txtAddress.setText(data.address);
+        binding.txtNotes.setText(data.notes);
+        binding.dueBalance.setText(data.due_balance);
+        binding.txtWallet.setText(data.wallet_balance);
+        binding.txtState.setText(data.status);
+        binding.txtCreditLimit.setText(data.credit_limit);
+        binding.txtCreditTime.setText(data.credit_time);
     }
 }

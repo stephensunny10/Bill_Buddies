@@ -236,5 +236,8 @@
     <string name="cess_applicable_purchase">Cess Applicable Purchase</string>
     <string name="total_outstaing_sale">Total Outstanding Sale</string>
     <string name="dispatch_though_applicable_purchase">Dispatch Though Applicable Purchase</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="due_balance">Due Balance</string>
 
 </resources>
