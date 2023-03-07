@@ -14,7 +14,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.itax.billbuddies.R;
-import com.itax.billbuddies.activities.Customer.CustomerDetailActivity;
+import com.itax.billbuddies.activities.Customer.CustomerDetailA;
 import com.itax.billbuddies.adapter.CustomerAdapter;
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.database.PaperDbManager;
@@ -54,7 +54,7 @@ public class Customer {
 
         private void moveNext ( int position){
         String customer_data = new Gson().toJson(itemList.get(position));
-        context.startActivity(new Intent(context, CustomerDetailActivity.class).putExtra("data", customer_data));
+        context.startActivity(new Intent(context, CustomerDetailA.class).putExtra("data", customer_data));
     }
         private void callApi () {
         String url = ApiList.CUSTOMER_URL + "?loginID=" + PaperDbManager.getLoginData().loginID + "&company_id=" + PaperDbManager.getCompany().Company_Id;

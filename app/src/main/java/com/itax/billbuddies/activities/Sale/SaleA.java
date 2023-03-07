@@ -26,11 +26,11 @@ public class SaleA extends AppCompatActivity {
         initView();
     }
 
-    private void initView(){
-        new Sales(this,binding.getRoot());
+    private void initView() {
+        new Sales(this, binding.getRoot());
         binding.txtTitle.setText("Sales");
 
-        binding.fab.setOnClickListener(v->{
+        binding.fab.setOnClickListener(v -> {
             moveToAddSales();
         });
  /*       binding.imgFilter.setOnClickListener(v -> {
@@ -38,18 +38,18 @@ public class SaleA extends AppCompatActivity {
             filterSaleListDialog.showDialog();
                 });*/
         binding.imgFilter.setOnClickListener(v -> {
-            if(!binding.searchLay.isShown())
+            if (!binding.searchLay.isShown())
                 binding.searchLay.setVisibility(View.VISIBLE);
             else
-            binding.searchLay.setVisibility(View.GONE);
+                binding.searchLay.setVisibility(View.GONE);
         });
 
-        binding.imgBack.setOnClickListener(v->{
+        binding.imgBack.setOnClickListener(v -> {
             finish();
         });
     }
 
-    private void moveToAddSales(){
+    private void moveToAddSales() {
         salesTypeDialog = new SalesTypeDialog(SaleA.this);
         salesTypeDialog.showDialog();
 

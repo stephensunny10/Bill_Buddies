@@ -18,6 +18,7 @@ public class Constants {
     public static final String our_services ="Our Services";
     public static String LOGIN_ID = "loginID";
     public static String SENT_OTP = "123456";
+    public static String scanned_result = "";
 
     public static final String UAT_ACCESS_TOKEN = "Basic dWF0X2NkbWl0YXg6dWF0X2NkbWl0YXhAMzIx";
 }

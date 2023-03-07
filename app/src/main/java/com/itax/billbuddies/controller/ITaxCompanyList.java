@@ -88,6 +88,10 @@ public class ITaxCompanyList implements ResponseListener {
                 dbManger.setAllCompanyList(itemList);
                 showData();
             }
+            
+            if (!itemList.isEmpty()){
+                PaperDbManager.setCompany(itemList.get(0));
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();

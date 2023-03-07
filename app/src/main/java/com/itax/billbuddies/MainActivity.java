@@ -26,6 +26,7 @@ import com.itax.billbuddies.activities.category.CategoryA;
 import com.itax.billbuddies.activities.payment.PaymentA;
 import com.itax.billbuddies.activities.reciept.ReceiptA;
 import com.itax.billbuddies.activities.setting.PrintSettingA;
+import com.itax.billbuddies.activities.setting.SettingsA;
 import com.itax.billbuddies.activities.setting.UserSettingA;
 import com.itax.billbuddies.activities.setting.settingF;
 import com.itax.billbuddies.activities.supplier.AddSupplierA;
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.settings:
                     binding.drawerLayout.closeDrawer(Gravity.LEFT);
-                    select_setting();
+                    startActivity(new Intent(this, SettingsA.class));
                     break;
                 case R.id.askQuery:
 
@@ -237,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+
     private void select_setting(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.select_setting);

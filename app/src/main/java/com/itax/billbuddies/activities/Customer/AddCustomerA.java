@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import com.google.gson.Gson;
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.api.RequestApi;
 import com.itax.billbuddies.database.PaperDbManager;
 import com.itax.billbuddies.databinding.ActivityAddCustomerBinding;
 import com.itax.billbuddies.listener.ResponseListener;
+import com.itax.billbuddies.models.ResponseModel;
 import com.itax.billbuddies.utils.Constants;
 import com.itax.billbuddies.utils.Functions;
 import com.itax.billbuddies.utils.SessionManager;
@@ -214,7 +216,6 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
         TdsAppList.add("yes");
         TdsAppList.add("No");
 
-
         TdsAppAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,TdsAppList);
         binding.spinnerTdsApplication.setAdapter(TdsAppAdapter);
 
@@ -360,10 +361,12 @@ public class AddCustomerA extends AppCompatActivity implements ResponseListener 
     public void onError(int requestCode, String error) {
 
     }
-    private void verifyAuth(String response) {
-        // RegisterModel model = new Gson().fromJson(response,RegisterModel.class);
-        Toasty.success(this, "Add Customer").show();
-        //functions.showSuccess("Profile Picture Uploaded");
 
+    private void verifyAuth(String response) {
+        ResponseModel model = new Gson().fromJson(response,ResponseModel.class);
+        if (model.success){
+            Toasty.success(this, "Customer added").show();
+        }
+        finish();
     }
 }

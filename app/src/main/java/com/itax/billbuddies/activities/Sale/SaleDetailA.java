@@ -14,24 +14,26 @@ import com.itax.billbuddies.models.SalesItem;
 import com.itax.billbuddies.models.SalesModel;
 
 public class SaleDetailA extends AppCompatActivity {
-SalesItem model;
-ActivitySaleDetailBinding binding;
+    SalesItem model;
+    ActivitySaleDetailBinding binding;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySaleDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        if (getIntent().getStringExtra("data") != null){
+        if (getIntent().getStringExtra("data") != null) {
 
             String data = getIntent().getStringExtra("data");
-            Log.e("tandata2", "onCreate: "+data );
-            model = new Gson().fromJson(data,SalesItem.class);
+            Log.e("tandata2", "onCreate: " + data);
+            model = new Gson().fromJson(data, SalesItem.class);
             setData(model);
             binding.imgBack.setOnClickListener(v -> {
                 finish();
             });
+        }
     }
-}
 
     private void setData(SalesItem data) {
         binding.txtReferenceNo.setText(data.reference_no);
@@ -51,5 +53,4 @@ ActivitySaleDetailBinding binding;
         binding.differentShipping.setText(data.different_shipping_details);
 
     }
-
 }

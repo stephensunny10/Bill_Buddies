@@ -59,6 +59,7 @@ public class AddSalesA extends AppCompatActivity {
             }
         });
     }
+
     private void add_tds_receiver_Spinner() {
         tds_receiver_List.add("No");
         tds_receiver_List.add("0.25%");

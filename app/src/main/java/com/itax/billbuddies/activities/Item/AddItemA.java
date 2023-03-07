@@ -40,6 +40,7 @@ import com.itax.billbuddies.utils.Constants;
 import com.itax.billbuddies.utils.Functions;
 import com.itax.billbuddies.utils.InputValidator;
 import com.itax.billbuddies.utils.SessionManager;
+import com.itax.billbuddies.zxing.BarcodeScanner;
 
 import org.json.JSONObject;
 
@@ -48,7 +49,7 @@ import java.util.ArrayList;
 
 public class AddItemA extends AppCompatActivity {
     ActivityAddItemBinding binding;
-    ActivityResultLauncher<Intent> resultLauncher;
+    ActivityResultLauncher<Intent> resultLauncher,scanResultLauncher;
     Bitmap bitmap;
     String TAG = "AddItemA",imageString = "";
     Functions functions;
@@ -113,6 +114,11 @@ public class AddItemA extends AppCompatActivity {
             startActivity(new Intent(this, HsnA.class));
         });
         getActivityResult();
+
+        binding.imgBarcode.setOnClickListener(v->{
+            openScanner();
+        });
+        getScanResult();
     }
 
     private void addSpinnerClick(){
@@ -478,5 +484,19 @@ public class AddItemA extends AppCompatActivity {
         catch (Exception e){
             Log.d(TAG, "callApi: "+ e.getMessage());
         }
+    }
+
+    public void openScanner(){
+        Intent intent = new Intent(this, BarcodeScanner.class);
+        scanResultLauncher.launch(intent);
+    }
+
+    private void getScanResult(){
+        scanResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            if (result.getResultCode() == Activity.RESULT_OK){
+                Intent data = result.getData();
+                binding.etBarcode.setText(Constants.scanned_result);
+            }
+        });
     }
 }

@@ -9,8 +9,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -63,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textColor="@color/black"
-                android:text="Pan Card"/>
+                android:text="Pan No."/>
             <EditText
                 android:id="@+id/et_pan_card"
                 android:layout_width="match_parent"
@@ -326,8 +325,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:layout_marginVertical="10dp"
-                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_red_gradient"
                 android:textColor="@color/white"
                 android:text="Submit"/>
         </LinearLayout>

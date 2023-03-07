@@ -19,6 +19,8 @@ public class SplashA extends AppCompatActivity {
     String TAG = "SplashActivity";
     SessionManager  sessionManager;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

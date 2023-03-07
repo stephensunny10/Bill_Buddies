@@ -23,6 +23,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
     ClickListener listener;
     ArrayList<CustomerModel.Customer> itemList;
 
+
     public CustomerAdapter(Context context, ArrayList<CustomerModel.Customer> itemList, ClickListener listener) {
         this.context = context;
         this.itemList = itemList;
@@ -35,18 +36,21 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
         return new CustomerAdapter.ViewHolder(view);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(@NonNull CustomerAdapter.ViewHolder holder, int position) {
         CustomerModel.Customer item = itemList.get(position);
-        if (item != null){
+        if (item.fname != null){
             holder.name.setText(item.fname);
-            holder.pan.setText(item.pan);
-            holder.address.setText(item.address);
-            holder.parent_layout.setOnClickListener(v -> {
-                listener.onClick(position);
-            });
         }
+        if (item.pan != null){
+            holder.pan.setText(item.pan);
+        }
+        if (item.address != null){
+            holder.address.setText(item.address);
+        }
+        holder.parent_layout.setOnClickListener(v -> {
+            listener.onClick(position);
+        });
     }
 
     @Override
@@ -61,7 +65,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
             super(itemView);
             name = itemView.findViewById(R.id.txt_name);
             pan = itemView.findViewById(R.id.txt_pan_no);
-            address = itemView.findViewById(R.id.txt_addres);
+            address = itemView.findViewById(R.id.txt_address);
             parent_layout = itemView.findViewById(R.id.parent_layout);
         }
     }

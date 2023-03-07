@@ -9,6 +9,7 @@
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/drawable/ic_outline_search_24.xml" value="0.1625" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_add_brand.xml" value="0.18" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_add_category.xml" value="0.21" />
+        <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_add_customer.xml" value="0.22" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_add_item.xml" value="0.22" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_add_payment.xml" value="0.18" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_add_purchase.xml" value="0.22" />
@@ -25,13 +26,16 @@
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_manage_bank_detail.xml" value="0.25" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_manage_cash_transaction.xml" value="0.22" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_payment.xml" value="0.184375" />
+        <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_print_setting.xml" value="0.22" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_purchase.xml" value="0.18" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_sale.xml" value="0.22" />
+        <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/dialog_company.xml" value="0.18" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/dialog_list.xml" value="0.22" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/item_cash_transaction.xml" value="0.22" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/item_category.xml" value="0.25" />
+        <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/item_customer.xml" value="0.25" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/item_for_payment.xml" value="0.33" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/item_list.xml" value="0.21472019464720193" />
         <entry key="..\:/client demand/Gst/Bill Buddies/App/Bill Buddies/Bill_Buddies/app/src/main/res/layout/item_manage_product.xml" value="0.25" />
