@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activities.payment.AddPaymentA">
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,9 +16,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:contentInsetStart="0dp"
             android:background="@drawable/gradient_white"
+            app:contentInsetStart="0dp"
             app:popupTheme="@style/AppTheme.AppBarOverlay">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -47,64 +49,151 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/scan_copy_sup_bill"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                app:hintEnabled="false"
                 android:layout_marginTop="16dp"
+                app:hintEnabled="false"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/filledTextAddressDeatils">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_type"
+                    android:id="@+id/et_customer_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="8dp"
-                    android:hint="@string/type"
+                    android:hint="@string/customer_name"
                     android:maxLines="1"
                     android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                app:hintEnabled="false"
                 android:layout_marginTop="16dp"
+                app:hintEnabled="false"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/filledTextAddressDeatils">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_category_name"
+                    android:id="@+id/et_phone_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="8dp"
-                    android:hint="@string/category_name"
+                    android:hint="@string/phone_number"
                     android:maxLines="1"
                     android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:layout_weight="0.6"
+                        android:padding="6dp"
+                        android:hint="dd-mm-yyyy"
+                        />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:layout_weight="0.4"
+                        android:padding="6dp"
+                        android:src="@drawable/calendar"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="8dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_grey"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Received" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.4"
+                                android:text=""
+                                android:textAlignment="textEnd" />
+                        </LinearLayout>
+                        <View style="@style/DividerLine"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="Total Amount" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.4"
+                                android:text=""
+                                android:textAlignment="textEnd" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <Button
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_red_gradient"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
                 android:layout_margin="30dp"
-                android:text="@string/submit"/>
+                android:background="@drawable/btn_red_gradient"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </ScrollView>

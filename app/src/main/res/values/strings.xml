@@ -239,5 +239,7 @@
     <string name="address">Address</string>
     <string name="city">City</string>
     <string name="due_balance">Due Balance</string>
+    <string name="header">Header</string>
+    <string name="footer">Footer</string>
 
 </resources>
