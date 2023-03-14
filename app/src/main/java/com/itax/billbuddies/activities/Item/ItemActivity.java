@@ -8,6 +8,8 @@ import com.itax.billbuddies.activities.Sale.AddSalesA;
 import com.itax.billbuddies.controller.ItemProduct;
 import com.itax.billbuddies.R;
 import com.itax.billbuddies.databinding.ActivityItemBinding;
+import com.itax.billbuddies.listener.CallBackListener;
+import com.itax.billbuddies.utils.Constants;
 
 
 public class ItemActivity extends AppCompatActivity {
@@ -20,18 +22,19 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item);
         binding = ActivityItemBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         setSupportActionBar(binding.toolbar);
         initView();
     }
 
     private void initView(){
-        product = new ItemProduct(this,binding.getRoot());
-        binding.txtTitle.setText("Manage Product");
-
+        product = new ItemProduct(this, binding.getRoot(), (position, data) -> {
+            moveToDetail(data);
+        });
+        binding.txtTitle.setText(getString(R.string.products));
         binding.imgBack.setOnClickListener(v->{
             finish();
         });
-
         binding.fab.setOnClickListener(v->{
             moveToAddItem();
         });
@@ -63,5 +66,8 @@ public class ItemActivity extends AppCompatActivity {
         product.callApi();
     }
 
+    private void moveToDetail(String data){
+        startActivity(new Intent(this,ItemDetailA.class).putExtra(Constants.data,data));
+    }
 
 }

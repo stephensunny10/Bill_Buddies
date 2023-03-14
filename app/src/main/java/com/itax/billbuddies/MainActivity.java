@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.itax.billbuddies.activities.Auth.LoginA;
+import com.itax.billbuddies.activities.Cart.CartA;
 import com.itax.billbuddies.activities.Customer.AddCustomerA;
 import com.itax.billbuddies.activities.Customer.CustomerA;
 import com.itax.billbuddies.activities.Item.ItemActivity;
@@ -114,6 +116,15 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        switch (menuItem.getItemId()){
+            case R.id.cart:
+                startActivity(new Intent(this, CartA.class));
+                break;
+        }
         return true;
     }
 

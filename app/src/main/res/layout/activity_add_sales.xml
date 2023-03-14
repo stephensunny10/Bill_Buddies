@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activities.Sale.AddSalesA">
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,9 +16,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:contentInsetStart="0dp"
             android:background="@drawable/gradient_white"
+            app:contentInsetStart="0dp"
             app:popupTheme="@style/AppTheme.AppBarOverlay">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -48,82 +50,92 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-    <ScrollView
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="10dp">
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/customer_name"
+                android:hint="@string/customer_name">
 
-                >
                 <EditText
-                    android:id="@+id/etName"
+                    android:id="@+id/et_customer_name"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
                     android:inputType="textPersonName"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="@dimen/sp14" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:layout_weight="1"
                     android:layout_marginRight="15dp"
-                    >
+                    android:layout_weight="1">
+
                     <EditText
-                        android:focusableInTouchMode="false"
                         android:id="@+id/etSaleDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
                         android:hint="Enter Sale Date"
-                        />
+                        android:textSize="@dimen/sp14" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="6dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/calendar"/>
+                    android:src="@drawable/calendar" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="@dimen/sp14"
                 android:layout_weight="1"
-                android:padding="8dp"
                 android:background="@drawable/bg_border_input"
-                android:layout_marginTop="@dimen/sp16"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:textSize="@dimen/sp16"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/select_status"/>
+                    android:layout_weight="0.7"
+                    android:text="@string/select_status"
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
-                    android:id="@+id/spinner_gender"
+                    android:id="@+id/spinner_sales_type"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/filledTextAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etRefno"
@@ -139,8 +151,8 @@
                 android:id="@+id/filledTextAddressDeatils"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/enter_invoice_id"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_invoice_id">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etinvoiceid"
@@ -154,397 +166,234 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="@dimen/sp14"
                 android:layout_weight="1"
-                android:padding="8dp"
                 android:background="@drawable/bg_border_input"
-                android:layout_marginTop="@dimen/sp16"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:textSize="@dimen/sp16"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/select_pay_type"/>
+                    android:layout_weight="0.7"
+                    android:text="@string/select_pay_type"
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
-                    android:id="@+id/spinner_pay"
+                    android:id="@+id/spinner_payment_type"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
+
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="@dimen/sp14"
                 android:layout_weight="1"
-                android:padding="8dp"
                 android:background="@drawable/bg_border_input"
-                android:layout_marginTop="@dimen/sp16"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:textSize="@dimen/sp16"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/select_shippment_dtail"/>
+                    android:layout_weight="0.7"
+                    android:text="@string/select_shippment_dtail"
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
                     android:id="@+id/spinner_shiping"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="@dimen/sp14"
                 android:layout_weight="1"
-                android:padding="8dp"
                 android:background="@drawable/bg_border_input"
-                android:layout_marginTop="@dimen/sp16"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:textSize="@dimen/sp16"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/dispatch_through"/>
+                    android:layout_weight="0.7"
+                    android:text="@string/dispatch_through"
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
                     android:id="@+id/spinner_dispatch_through"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="@dimen/sp14"
                 android:layout_weight="1"
-                android:padding="8dp"
                 android:background="@drawable/bg_border_input"
-                android:layout_marginTop="@dimen/sp16"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:textSize="@dimen/sp16"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/bill_applicable"/>
+                    android:layout_weight="0.7"
+                    android:text="@string/bill_applicable"
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
                     android:id="@+id/spinner_bill_applicable"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="8dp"
-    android:layout_marginTop="10dp"
-    >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/btn_grey"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/item_list"
-            android:textColor="@color/blue"
-            android:textSize="18sp"
-            android:layout_margin="10dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:layout_marginTop="@dimen/sp16"
-            android:layout_weight="1"
-            android:background="@drawable/bg_border_input"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="0.7"
-                android:text="@string/item_name"
-                android:textSize="@dimen/sp16" />
-
-            <Spinner
-                android:id="@+id/spinner_item_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_item_price"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/item_unit"
-                android:maxLines="1"
-                android:textSize="14sp" />
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp">
 
-        </com.google.android.material.textfield.TextInputLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:weightSum="2"
-    android:layout_margin="6dp"
-    android:orientation="horizontal">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Disc.(%)"/>
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="6dp"
-        android:background="@drawable/bg_border_input"
-        android:focusableInTouchMode="false"
-        android:text="0.0"
-        android:textAlignment="textEnd"/>
-</LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-              android:weightSum="2"
-    android:layout_margin="6dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Disc.(Rs)"/>
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="false"
-                android:background="@drawable/bg_border_input"
-                android:layout_weight="1"
-                android:padding="6dp"
-                android:text="0.0"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-              android:weightSum="2"
-              android:layout_margin="6dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tax "/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="false"
-                android:layout_weight="1"
-                android:padding="6dp"
-                android:background="@drawable/bg_border_input"
-                android:text="0.0"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-              android:weightSum="2"
-    android:layout_margin="6dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tax Amt"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="false"
-                android:layout_weight="1"
-                android:padding="6dp"
-                android:background="@drawable/bg_border_input"
-                android:text="0.0"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-              android:weightSum="2"
-    android:layout_margin="6dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="GST CESS"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="false"
-                android:layout_weight="1"
-                android:padding="6dp"
-                android:background="@drawable/bg_border_input"
-                android:text="0.0"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-              android:weightSum="2"
-    android:layout_margin="6dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" Taxable Value"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="false"
-                android:layout_weight="1"
-                android:padding="6dp"
-                android:background="@drawable/bg_border_input"
-                android:text="0.0"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-              android:weightSum="2"
-    android:layout_margin="6dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Total Amount"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="false"
-                android:layout_weight="1"
-                android:padding="6dp"
-                android:background="@drawable/bg_border_input"
-                android:text="0.0"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add New Row"
-                android:layout_marginVertical="5dp"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/light_blue"
-                />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/products"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="@color/blue"
+                    android:text="Add Item"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/pb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                android:padding="10dp"
                 android:weightSum="2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="0.8"
                     android:text="Sub Total Taxable Value:"
                     android:textColor="@color/light_black"
-                    />
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/txt_sub_total_tax_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1.2"
                     android:text="0.0"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="@dimen/sp14" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
-                android:padding="10dp"
                 android:weightSum="2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="0.8"
                     android:text="Total Tax Amount:"
                     android:textColor="@color/light_black"
-                    />
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/txt_total_tax_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1.2"
                     android:text="0.0"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="@dimen/sp14" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
-                android:padding="10dp"
                 android:weightSum="2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="0.8"
                     android:text="GST CESS Amount:"
                     android:textColor="@color/light_black"
-                    />
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/txt_cess_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1.2"
                     android:text="0.0"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="@dimen/sp14" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/dark_grey"/>
+                android:layout_marginTop="10dp"
+                android:background="@color/dark_grey" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -557,165 +406,187 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
                 android:weightSum="2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="0.8"
                     android:text="@string/subtotal"
                     android:textColor="@color/light_black"
-                    />
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/txt_sub_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1.2"
                     android:text="0.0"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:orientation="horizontal"
-                android:padding="10dp"
                 android:weightSum="3">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:text="Other Charges:"
-                    android:textColor="@color/light_black" />
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
                     android:id="@+id/spinner_other_charges"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="1.2"/>
+                    android:layout_weight="1.2" />
 
                 <TextView
                     android:id="@+id/txt_other_charges"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1"
                     android:text="0.0"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="@dimen/sp14" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
                 android:weightSum="3">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
-                    android:text="TDS Receivable?"
                     android:layout_weight="0.4"
+                    android:text="TDS Receivable?"
                     android:textColor="@color/light_black"
-                    />
+                    android:textSize="@dimen/sp14" />
+
                 <Spinner
                     android:id="@+id/spinner_tds_receivable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
+
                 <TextView
                     android:id="@+id/txt_tds_receivable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.6"
-                    android:textSize="@dimen/sp16"
                     android:text="0.0"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="@dimen/sp14" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/dark_grey" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="10dp"
-              >
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="0.8"
                     android:text="Grand Total :"
                     android:textColor="@color/light_black"
-                    />
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/txt_grand_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1.2"
                     android:text="0.0"
                     android:textAlignment="textEnd"
-                    android:textColor="@color/black"
-                    />
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/light_grey"
-                android:background="@drawable/bg_border_green"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
                 android:weightSum="2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="0.8"
                     android:text="Due :"
-                    android:textColor="@color/wrong_answer"
-                    />
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/txt_due"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp16"
                     android:layout_weight="1.2"
                     android:text="0.0"
                     android:textAlignment="textEnd"
-                    android:textColor="@color/black"
-                    />
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp14" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_next"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/btn_red_gradient"
-                android:textColor="#fff"
-                android:text="Save"/>
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_draft"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_blue_border"
+                    android:text="@string/draft"
+                    android:textColor="@color/blue" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_blue"
+                    android:text="@string/submit"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

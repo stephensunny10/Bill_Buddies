@@ -11,8 +11,8 @@ public class ApiList {
     public static final String ourServicesUrl = BaseUrl + "get_ServiceMaster_List";
     public static final String ITAX_COMPANY = BaseUrl + "GetCompanyList";
     // APP API BEGIN //https://sysqbit.com/bill-buddies/api/cash-transaction?loginID=ITIC-00005161&company_id=COM00000001
-    //public static final String BILL_BUDDIES_BASE_URL = "http://192.168.242.64/bill-buddies/";//"http://192.168.242.64/bill-buddies/";
-    public static final String BILL_BUDDIES_BASE_URL = "https://sysqbit.com/bill-buddies/";
+    public static final String BILL_BUDDIES_BASE_URL = "http://192.168.242.64/bill-buddies/";//"http://192.168.242.64/bill-buddies/";
+    //public static final String BILL_BUDDIES_BASE_URL = "https://sysqbit.com/bill-buddies/";
     public static final String BILL_BUDDIES_IMAGE_URL = BILL_BUDDIES_BASE_URL + "public/uploads/images/";
     public static final String BILL_BUDDIES_API_URL = BILL_BUDDIES_BASE_URL + "api/";
     public static final String CUSTOMER_URL = BILL_BUDDIES_API_URL + "customer";
@@ -26,6 +26,6 @@ public class ApiList {
     public static final String BRAND_URL = BILL_BUDDIES_API_URL + "item-brand";
     public static final String UNIT_URL = BILL_BUDDIES_API_URL + "item-unit";
     public static final String TAX_CLASS_URL = BILL_BUDDIES_API_URL + "item-tax-class";
-    public static final String userSettingUrl= BILL_BUDDIES_API_URL+"user-settings.php";
-    public static final String PRINT_SETTING_URL= BILL_BUDDIES_API_URL+"print-settings";
+    public static final String USER_SETTINGS_URL = BILL_BUDDIES_API_URL + "user-settings";
+    public static final String PRINT_SETTING_URL = BILL_BUDDIES_API_URL + "print-settings";
 }

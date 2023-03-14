@@ -1,17 +1,13 @@
 package com.itax.billbuddies.models;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
 
 public class CustomerModel {
     public boolean success;
     public String message;
-    @SerializedName("data")
-    public ArrayList<Customer> data;
+    public ArrayList<CustomerItem> data;
 
-
-    public static class Customer{
+    public static class CustomerItem {
         public String id;
         public String loginID;
         public String company_id;
@@ -44,4 +40,5 @@ public class CustomerModel {
         public String date_created;
         public String updatedBy;
         public String date_modified;
-}}
+    }
+}

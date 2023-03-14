@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import com.itax.billbuddies.adapter.ItemProductsAdapter;
 import com.itax.billbuddies.api.ApiList;
 import com.itax.billbuddies.database.PaperDbManager;
+import com.itax.billbuddies.listener.CallBackListener;
 import com.itax.billbuddies.models.ItemModel;
 import com.itax.billbuddies.R;
 
@@ -30,11 +31,13 @@ public class ItemProduct {
     ArrayList<ItemModel.Item> allItemList = new ArrayList<>();
     ItemProductsAdapter adapter;
     String TAG = "ItemProduct";
+    CallBackListener listener;
 
 
-    public ItemProduct(Context context, View view) {
+    public ItemProduct(Context context, View view, CallBackListener listener) {
         this.context = context;
         this.view = view;
+        this.listener = listener;
         initView();
     }
 
@@ -42,7 +45,8 @@ public class ItemProduct {
         recyclerView = view.findViewById(R.id.recycler_view);
         pb = view.findViewById(R.id.pb);
         adapter = new ItemProductsAdapter(context, itemList, position -> {
-            // clicked item
+            String data = new Gson().toJson(itemList.get(position));
+            listener.onReturn(position,data);
         });
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         recyclerView.setHasFixedSize(true);

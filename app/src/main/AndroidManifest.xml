@@ -19,13 +19,24 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activities.Cart.CartA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Item.ItemSelectA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Item.ItemDetailA"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Customer.SelectCustomerA"
+            android:exported="false" />
         <activity
             android:name=".activities.setting.SettingsA"
             android:exported="false" />
         <activity
             android:name=".activities.setting.PrintSettingA"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".zxing.BarcodeScanner"
             android:exported="false" />

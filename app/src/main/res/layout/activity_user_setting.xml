@@ -9,8 +9,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -70,7 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -86,7 +86,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/black"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -97,12 +98,12 @@
                 android:textColor="@color/black"
                 android:text="@string/purchase_return_invoice_prefix"/>
             <EditText
-
                 android:id="@+id/et_purch_return_invoice_prefix"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/black"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -121,7 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -139,9 +141,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:background="@drawable/bg_border_input"
                 android:maxLength="12"
-                android:padding="5dp"
                 android:textColor="@color/primary_txt_color" />
 
             <TextView
@@ -156,7 +159,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -173,7 +177,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -189,7 +194,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -206,7 +212,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -222,7 +229,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -238,7 +246,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -254,7 +261,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -269,44 +277,85 @@
             <EditText
                 android:id="@+id/et_sales_fixed_asset"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:minHeight="45dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="#F0F2F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_select_auth_image"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/ic_image" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="Tap to upload authorized logo"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="14sp"
                 android:textColor="@color/black"
-                android:text="@string/use_authorised_sig_image"/>
-            <EditText
-                android:id="@+id/et_use_authorised_sig_image"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-                android:background="@drawable/bg_border_input" />
-            <TextView
-                android:layout_marginTop="10dp"
+                android:text="@string/use_authorized_image" />
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:text="@string/authorised_sig_image"/>
-            <EditText
-                android:id="@+id/et_authorised_sig_image"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
-                android:background="@drawable/bg_border_input" />
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_use_authorized_image">
+
+                <RadioButton
+                    android:id="@+id/rb_authorized_image_yes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yes"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_authorized_image_no"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
@@ -317,11 +366,12 @@
             <EditText
                 android:id="@+id/et_terms_condition"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:minHeight="45dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
-                android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
             <TextView
                 android:layout_marginTop="10dp"
@@ -333,9 +383,11 @@
             <EditText
                 android:id="@+id/et_invoice_footer_text"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:minHeight="45dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
                 android:textColor="@color/primary_txt_color"
                 android:maxLength="12"
                 android:background="@drawable/bg_border_input" />
@@ -356,17 +408,18 @@
                 android:id="@+id/radioGroup_item">
 
                 <RadioButton
-                    android:id="@+id/yes_item_wise"
+                    android:id="@+id/rb_item_wise_yes"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="yes"
                     android:layout_marginTop="10dp"
                     android:textSize="20dp" />
                 <RadioButton
-                    android:id="@+id/no_item_wise"
+                    android:id="@+id/rb_item_wise_no"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="no"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:textSize="20dp" />
             </RadioGroup>
@@ -385,7 +438,7 @@
                 android:id="@+id/radioGroup_bill">
 
                 <RadioButton
-                    android:id="@+id/yes_bill_wise"
+                    android:id="@+id/rb_bill_wise_yes"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="yes"
@@ -394,46 +447,34 @@
                     android:textSize="20dp" />
 
                 <RadioButton
-                    android:id="@+id/no_bill_wise"
+                    android:id="@+id/rb_bill_wise_no"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="no"
                     android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
                     android:checked="false"
                     android:textSize="20dp" />
             </RadioGroup>
-                <TextView
-                    android:id="@+id/text_tds"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:text="@string/tds_applicable" />
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/radioGroup_tds">
 
-                    <RadioButton
-                        android:id="@+id/yes_tds_app"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:text="yes"
-                        android:layout_marginTop="10dp"
-                        android:checked="false"
-                        android:textSize="20dp" />
-
-                    <RadioButton
-                        android:id="@+id/no_tds_app"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:text="no"
-                        android:layout_marginTop="10dp"
-                        android:checked="false"
-                        android:textSize="20dp" />
-                </RadioGroup>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="@string/license_expiry"/>
+            <EditText
+                android:focusableInTouchMode="false"
+                android:id="@+id/et_license_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="10dp"
+                android:textColor="@color/primary_txt_color"
+                android:maxLength="20"
+                android:background="@drawable/bg_border_input" />
 
             <Button
                 android:id="@+id/btn_submit"

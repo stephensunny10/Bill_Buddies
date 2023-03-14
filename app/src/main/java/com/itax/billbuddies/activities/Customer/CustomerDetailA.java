@@ -11,7 +11,7 @@ import com.itax.billbuddies.models.CustomerModel;
 
 public class CustomerDetailA extends AppCompatActivity {
     ActivityCustomerDetailBinding binding;
-    CustomerModel.Customer model;
+    CustomerModel.CustomerItem model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class CustomerDetailA extends AppCompatActivity {
         if (getIntent().getStringExtra("data") != null) {
             String data = getIntent().getStringExtra("data");
             Log.e("customer", "onCreate: " + data);
-            model = new Gson().fromJson(data, CustomerModel.Customer.class);
+            model = new Gson().fromJson(data, CustomerModel.CustomerItem.class);
             setData(model);
         }
 
@@ -35,7 +35,7 @@ public class CustomerDetailA extends AppCompatActivity {
         });
     }
 
-    private void setData(CustomerModel.Customer data) {
+    private void setData(CustomerModel.CustomerItem data) {
         binding.txtName.setText(data.fname);
         binding.txtMobile.setText(data.mobile);
         binding.txtEmail.setText(data.email);

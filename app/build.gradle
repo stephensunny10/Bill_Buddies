@@ -62,4 +62,6 @@ dependencies {
     implementation "com.squareup.picasso:picasso:2.8"
     // zxing
     implementation 'me.dm7.barcodescanner:zxing:1.9' // this is scanner and generating qr code
+    //MP Pie chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
 }

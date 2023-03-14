@@ -9,13 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E2D8F4"
+        android:background="@color/white"
         android:orientation="vertical">
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="6dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/orange">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,8 +98,9 @@
             app:cardCornerRadius="10dp"
              android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <com.smarteist.autoimageslider.SliderView
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/orange">
+            <com.smarteist.autoimageslider.SliderView
             android:id="@+id/imageSlider"
             android:layout_width="match_parent"
             android:layout_height="120dp"
@@ -109,23 +111,72 @@
             app:sliderIndicatorGravity="center_horizontal|bottom"
             app:sliderIndicatorMargin="15dp"
             app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorPadding="2dp"
+            app:sliderIndicatorRadius="1dp"
             app:sliderIndicatorSelectedColor="#5A5A5A"
             app:sliderIndicatorUnselectedColor="#FFF"
             app:sliderScrollTimeInSec="1"
             app:sliderStartAutoCycle="true" />
         </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/layout_graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:outlineSpotShadowColor="@color/dark_grey"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Sales this month"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/view_detail"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+        </RelativeLayout>
+
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/orange"
             android:layout_margin="10dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:layout_marginHorizontal="12dp"
+                android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/sp16"
@@ -136,15 +187,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="20sp"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginBottom="20sp" />
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <com.smarteist.autoimageslider.SliderView
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/orange">
+            <com.smarteist.autoimageslider.SliderView
             android:id="@+id/imageSlider2"
             android:layout_width="match_parent"
             android:layout_height="120dp"
@@ -155,8 +206,8 @@
             app:sliderIndicatorGravity="center_horizontal|bottom"
             app:sliderIndicatorMargin="20dp"
             app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorPadding="2dp"
+            app:sliderIndicatorRadius="1dp"
             app:sliderIndicatorSelectedColor="#5A5A5A"
             app:sliderIndicatorUnselectedColor="#FFF"
             app:sliderScrollTimeInSec="1"
@@ -168,16 +219,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="@dimen/sp16"
-            android:text="@string/finance"/>
+            android:layout_marginLeft="10dp"
+            android:outlineSpotShadowColor="@color/orange">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp16"
+                android:text="@string/finance"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view2"
@@ -192,7 +244,8 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/orange">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -304,7 +357,8 @@
             app:cardCornerRadius="6dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="135dp">
+            android:layout_height="135dp"
+            android:outlineSpotShadowColor="@color/orange">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

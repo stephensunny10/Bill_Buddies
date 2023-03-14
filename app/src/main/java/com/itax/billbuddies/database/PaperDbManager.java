@@ -1,5 +1,6 @@
 package com.itax.billbuddies.database;
 
+import com.itax.billbuddies.models.CartItem;
 import com.itax.billbuddies.models.ITaxCompanyItem;
 import com.itax.billbuddies.models.LoginModel;
 
@@ -31,5 +32,13 @@ public class PaperDbManager {
 
     public static void setCompany(ITaxCompanyItem iTaxCompany) {
         Paper.book("ITaxInfo").write("iTaxCompany",iTaxCompany);
+    }
+
+    public static ArrayList<CartItem> getCartList() {
+        return Paper.book("ITaxInfo").read("cart",new ArrayList<CartItem>());
+    }
+
+    public static void setCartList(ArrayList<CartItem> cartList) {
+        Paper.book("ITaxInfo").write("cart",cartList);
     }
 }

@@ -100,7 +100,7 @@ public class Functions {
             return Integer.parseInt(value);
         }
         else
-            return 1;
+            return 0;
     }
 
     public static double ParseDouble(String value){

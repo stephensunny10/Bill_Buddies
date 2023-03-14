@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
@@ -53,7 +54,12 @@ public class ItemProductsAdapter extends RecyclerView.Adapter<ItemProductsAdapte
             holder.selling_price_txt.setText(item.selling_price);
 
             Glide.with(context).load(ApiList.BILL_BUDDIES_IMAGE_URL + item.main_image).error(R.drawable.img_empty).into(holder.product_image);
+            
+            holder.parent_layout.setOnClickListener(v->{
+                listener.onClick(position);
+            });
         }
+
     }
 
     @Override
@@ -64,7 +70,7 @@ public class ItemProductsAdapter extends RecyclerView.Adapter<ItemProductsAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView product_image;
         public TextView sku_txt,hsn_txt,item_name_txt,brand_txt,category_txt,inventory_txt,unit_txt,price_txt,purchase_price_txt,selling_price_txt;
-        public LinearLayout parent_layout;
+        public RelativeLayout parent_layout;
         public ViewHolder(View itemView) {
             super(itemView);
             sku_txt = itemView.findViewById(R.id.txt_sku);
@@ -77,8 +83,8 @@ public class ItemProductsAdapter extends RecyclerView.Adapter<ItemProductsAdapte
             price_txt = itemView.findViewById(R.id.txt_price);
             purchase_price_txt = itemView.findViewById(R.id.txt_purchase_price);
             selling_price_txt = itemView.findViewById(R.id.txt_selling_price);
-
             product_image = itemView.findViewById(R.id.img_product);
+            parent_layout = itemView.findViewById(R.id.parent_layout);
         }
     }
 

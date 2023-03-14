@@ -1,7 +1,6 @@
 package com.itax.billbuddies.adapter;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +8,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.itax.billbuddies.R;
@@ -21,10 +19,10 @@ import java.util.ArrayList;
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHolder>{
     Context context;
     ClickListener listener;
-    ArrayList<CustomerModel.Customer> itemList;
+    ArrayList<CustomerModel.CustomerItem> itemList;
 
 
-    public CustomerAdapter(Context context, ArrayList<CustomerModel.Customer> itemList, ClickListener listener) {
+    public CustomerAdapter(Context context, ArrayList<CustomerModel.CustomerItem> itemList, ClickListener listener) {
         this.context = context;
         this.itemList = itemList;
         this.listener = listener;
@@ -38,7 +36,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull CustomerAdapter.ViewHolder holder, int position) {
-        CustomerModel.Customer item = itemList.get(position);
+        CustomerModel.CustomerItem item = itemList.get(position);
         if (item.fname != null){
             holder.name.setText(item.fname);
         }
